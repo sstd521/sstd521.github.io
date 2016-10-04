@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="JavaScript," />
 
 
 
@@ -84,25 +84,19 @@
 
 
 
-<meta name="description" content="###你不知道的JavaScript——原型
-
-JavaScript 中的对象有一个特殊的 [[Prototype]] 内置属性，其实就是对于其他对象的引用。几乎所有的对象在创建时 [[Prototype]] 属性都会被赋予一个非空的值。
-使用 for..in 遍历对象时原理和查找 [[Prototype]] 链类似，任何可以通过原型链访问到（并且是 enumerable ，）的属性都会被枚举。使">
+<meta name="description" content="JavaScript 中的对象有一个特殊的 [[Prototype]] 内置属性，其实就是对于其他对象的引用。几乎所有的对象在创建时 [[Prototype]] 属性都会被赋予一个非空的值。
+使用 for..in 遍历对象时原理和查找 [[Prototype]] 链类似，任何可以通过原型链访问到（并且是 enumerable ，）的属性都会被枚举。使用 in 操作符来检查属性在对象中是否存在时，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="WeekNote">
+<meta property="og:title" content="你不知道的JavaScript00——原型">
 <meta property="og:url" content="http://yoursite.com/2016/10/04/你不知道的JavaScript00——原型/index.html">
 <meta property="og:site_name" content="WeekNote">
-<meta property="og:description" content="###你不知道的JavaScript——原型
-
-JavaScript 中的对象有一个特殊的 [[Prototype]] 内置属性，其实就是对于其他对象的引用。几乎所有的对象在创建时 [[Prototype]] 属性都会被赋予一个非空的值。
-使用 for..in 遍历对象时原理和查找 [[Prototype]] 链类似，任何可以通过原型链访问到（并且是 enumerable ，）的属性都会被枚举。使">
-<meta property="og:updated_time" content="2016-10-04T05:19:02.000Z">
+<meta property="og:description" content="JavaScript 中的对象有一个特殊的 [[Prototype]] 内置属性，其实就是对于其他对象的引用。几乎所有的对象在创建时 [[Prototype]] 属性都会被赋予一个非空的值。
+使用 for..in 遍历对象时原理和查找 [[Prototype]] 链类似，任何可以通过原型链访问到（并且是 enumerable ，）的属性都会被枚举。使用 in 操作符来检查属性在对象中是否存在时，">
+<meta property="og:updated_time" content="2016-10-04T07:38:00.396Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="WeekNote">
-<meta name="twitter:description" content="###你不知道的JavaScript——原型
-
-JavaScript 中的对象有一个特殊的 [[Prototype]] 内置属性，其实就是对于其他对象的引用。几乎所有的对象在创建时 [[Prototype]] 属性都会被赋予一个非空的值。
-使用 for..in 遍历对象时原理和查找 [[Prototype]] 链类似，任何可以通过原型链访问到（并且是 enumerable ，）的属性都会被枚举。使">
+<meta name="twitter:title" content="你不知道的JavaScript00——原型">
+<meta name="twitter:description" content="JavaScript 中的对象有一个特殊的 [[Prototype]] 内置属性，其实就是对于其他对象的引用。几乎所有的对象在创建时 [[Prototype]] 属性都会被赋予一个非空的值。
+使用 for..in 遍历对象时原理和查找 [[Prototype]] 链类似，任何可以通过原型链访问到（并且是 enumerable ，）的属性都会被枚举。使用 in 操作符来检查属性在对象中是否存在时，">
 
 
 
@@ -115,7 +109,7 @@ JavaScript 中的对象有一个特殊的 [[Prototype]] 内置属性，其实就
     motion: true,
     duoshuo: {
       userId: 0,
-      author: 'Author'
+      author: '博主'
     }
   };
 </script>
@@ -125,10 +119,10 @@ JavaScript 中的对象有一个特殊的 [[Prototype]] 内置属性，其实就
 
   <link rel="canonical" href="http://yoursite.com/2016/10/04/你不知道的JavaScript00——原型/"/>
 
-  <title>  | WeekNote </title>
+  <title> 你不知道的JavaScript00——原型 | WeekNote </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
 
@@ -160,7 +154,7 @@ JavaScript 中的对象有一个特殊的 [[Prototype]] 内置属性，其实就
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-  <p class="site-subtitle">sstd</p>
+  <p class="site-subtitle">publish at least one note a week</p>
 </div>
 
 <div class="site-nav-toggle">
@@ -183,7 +177,7 @@ JavaScript 中的对象有一个特殊的 [[Prototype]] 内置属性，其实就
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            首页
           </a>
         </li>
       
@@ -193,7 +187,7 @@ JavaScript 中的对象有一个特殊的 [[Prototype]] 内置属性，其实就
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
-            Kategorien
+            分类
           </a>
         </li>
       
@@ -203,7 +197,7 @@ JavaScript 中的对象有一个特殊的 [[Prototype]] 内置属性，其实就
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            归档
           </a>
         </li>
       
@@ -213,7 +207,7 @@ JavaScript 中的对象有一个特殊的 [[Prototype]] 内置属性，其实就
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            Tags
+            标签
           </a>
         </li>
       
@@ -256,7 +250,7 @@ JavaScript 中的对象有一个特殊的 [[Prototype]] 内置属性，其实就
             
             
               
-                
+                你不知道的JavaScript00——原型
               
             
           </h1>
@@ -267,8 +261,8 @@ JavaScript 中的对象有一个特殊的 [[Prototype]] 内置属性，其实就
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2016-10-04T13:20:48+08:00" content="2016-10-04">
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-04T15:32:08+08:00" content="2016-10-04">
               2016-10-04
             </time>
           </span>
@@ -308,8 +302,7 @@ JavaScript 中的对象有一个特殊的 [[Prototype]] 内置属性，其实就
       
 
       
-        <p>###你不知道的JavaScript——原型</p>
-<blockquote>
+        <blockquote>
 <p>JavaScript 中的对象有一个特殊的 [[Prototype]] 内置属性，其实就是对于其他对象的引用。几乎所有的对象在创建时 [[Prototype]] 属性都会被赋予一个非空的值。</p>
 <p>使用 for..in 遍历对象时原理和查找 [[Prototype]] 链类似，任何可以通过原型链访问到（并且是 enumerable ，）的属性都会被枚举。使用 in 操作符来检查属性在对象中是否存在时，同样会查找对象的整条原型链（无论属性是否可枚举）<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> anotherObject = &#123;</div><div class="line"><span class="attr">a</span>:<span class="number">2</span></div><div class="line">&#125;;</div><div class="line"><span class="comment">// 创建一个关联到 anotherObject 的对象</span></div><div class="line"><span class="keyword">var</span> myObject = <span class="built_in">Object</span>.create( anotherObject );</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> k <span class="keyword">in</span> myObject) &#123;</div><div class="line"><span class="built_in">console</span>.log(<span class="string">"found: "</span> + k);</div><div class="line">&#125;</div><div class="line"><span class="comment">// found: a</span></div><div class="line">(<span class="string">"a"</span> <span class="keyword">in</span> myObject); <span class="comment">// true</span></div><div class="line">myObject.foo = <span class="string">"bar"</span>;</div></pre></td></tr></table></figure></p>
 <p>如果 myObject 对象中包含名为 foo 的普通数据访问属性，这条赋值语句只会修改已有的属<br>性值。<br>如果 foo 不是直接存在于 myObject 中， [[Prototype]] 链就会被遍历，类似 [[Get]] 操作。<br>如果原型链上找不到 foo ， foo 就会被直接添加到 myObject 上。</p>
@@ -338,22 +331,24 @@ JavaScript 中的对象有一个特殊的 [[Prototype]] 内置属性，其实就
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/10/04/My-First-Blog/" rel="next" title="My First Blog">
-                <i class="fa fa-chevron-left"></i> My First Blog
+              <a href="/2016/10/04/JavaScript学习笔记01/" rel="next" title="JavaScript学习笔记01">
+                <i class="fa fa-chevron-left"></i> JavaScript学习笔记01
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/10/04/JavaScript学习笔记01/" rel="prev" title="JavaScript学习笔记01">
-                JavaScript学习笔记01 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -380,7 +375,7 @@ JavaScript 中的对象有一个特殊的 [[Prototype]] 内置属性，其实就
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2016/10/04/你不知道的JavaScript00——原型/"
-           data-title="" data-url="http://yoursite.com/2016/10/04/你不知道的JavaScript00——原型/">
+           data-title="你不知道的JavaScript00——原型" data-url="http://yoursite.com/2016/10/04/你不知道的JavaScript00——原型/">
       </div>
     
   </div>
@@ -406,10 +401,10 @@ JavaScript 中的对象有一个特殊的 [[Prototype]] 内置属性，其实就
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Inhaltsverzeichnis
+            文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Übersicht
+            站点概览
           </li>
         </ul>
       
@@ -418,15 +413,15 @@ JavaScript 中的对象有一个特殊的 [[Prototype]] 内置属性，其实就
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
-               alt="John Doe" />
-          <p class="site-author-name" itemprop="name">John Doe</p>
-          <p class="site-description motion-element" itemprop="description"></p>
+               alt="sstd521" />
+          <p class="site-author-name" itemprop="name">sstd521</p>
+          <p class="site-description motion-element" itemprop="description">learning notes</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">4</span>
-              <span class="site-state-item-name">Artikel</span>
+              <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
@@ -435,8 +430,8 @@ JavaScript 中的对象有一个特殊的 [[Prototype]] 内置属性，其实就
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">Tags</span>
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
               </a>
             </div>
           
@@ -464,7 +459,7 @@ JavaScript 中的对象有一个特殊的 [[Prototype]] 内置属性，其实就
               
             
             
-              <p class="post-toc-empty">Dieser Artikel hat kein Inhaltsverzeichnis</p>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
         </section>
@@ -487,15 +482,15 @@ JavaScript 中的对象有一个特殊的 [[Prototype]] 内置属性，其实就
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">sstd521</span>
 </div>
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
-  Theme -
+  主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Mist
   </a>
