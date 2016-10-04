@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="JavaScrpt," />
 
 
 
@@ -84,22 +84,19 @@
 
 
 
-<meta name="description" content="JavaScript学习笔记01[toc]
-原生函数
-原生函数可以当做构造函数来使用，通过构造函数（如 new String(&amp;quot;abc&amp;quot;)）创建出来的是封装了基本类型值（如 &amp;quot;abc&amp;quot;）的封装对象。12345var  string = new String(&quot;abc&quot;);console.log(string);  // [String: &apos;abc&apos;]cons">
+<meta name="description" content="原生函数
+原生函数可以当做构造函数来使用，通过构造函数（如 new String(&amp;quot;abc&amp;quot;)）创建出来的是封装了基本类型值（如 &amp;quot;abc&amp;quot;）的封装对象。12345var  string = new String(&quot;abc&quot;);console.log(string);  // [String: &apos;abc&apos;]console.log(string instanc">
 <meta property="og:type" content="article">
-<meta property="og:title" content="WeekNote">
+<meta property="og:title" content="JavaScript学习笔记01">
 <meta property="og:url" content="http://yoursite.com/2016/10/04/JavaScript学习笔记01/index.html">
 <meta property="og:site_name" content="WeekNote">
-<meta property="og:description" content="JavaScript学习笔记01[toc]
-原生函数
-原生函数可以当做构造函数来使用，通过构造函数（如 new String(&amp;quot;abc&amp;quot;)）创建出来的是封装了基本类型值（如 &amp;quot;abc&amp;quot;）的封装对象。12345var  string = new String(&quot;abc&quot;);console.log(string);  // [String: &apos;abc&apos;]cons">
-<meta property="og:updated_time" content="2016-10-04T04:53:33.313Z">
+<meta property="og:description" content="原生函数
+原生函数可以当做构造函数来使用，通过构造函数（如 new String(&amp;quot;abc&amp;quot;)）创建出来的是封装了基本类型值（如 &amp;quot;abc&amp;quot;）的封装对象。12345var  string = new String(&quot;abc&quot;);console.log(string);  // [String: &apos;abc&apos;]console.log(string instanc">
+<meta property="og:updated_time" content="2016-10-04T07:16:09.361Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="WeekNote">
-<meta name="twitter:description" content="JavaScript学习笔记01[toc]
-原生函数
-原生函数可以当做构造函数来使用，通过构造函数（如 new String(&amp;quot;abc&amp;quot;)）创建出来的是封装了基本类型值（如 &amp;quot;abc&amp;quot;）的封装对象。12345var  string = new String(&quot;abc&quot;);console.log(string);  // [String: &apos;abc&apos;]cons">
+<meta name="twitter:title" content="JavaScript学习笔记01">
+<meta name="twitter:description" content="原生函数
+原生函数可以当做构造函数来使用，通过构造函数（如 new String(&amp;quot;abc&amp;quot;)）创建出来的是封装了基本类型值（如 &amp;quot;abc&amp;quot;）的封装对象。12345var  string = new String(&quot;abc&quot;);console.log(string);  // [String: &apos;abc&apos;]console.log(string instanc">
 
 
 
@@ -122,7 +119,7 @@
 
   <link rel="canonical" href="http://yoursite.com/2016/10/04/JavaScript学习笔记01/"/>
 
-  <title>  | WeekNote </title>
+  <title> JavaScript学习笔记01 | WeekNote </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -253,7 +250,7 @@
             
             
               
-                
+                JavaScript学习笔记01
               
             
           </h1>
@@ -265,7 +262,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2016-10-04T12:54:13+08:00" content="2016-10-04">
+            <time itemprop="dateCreated" datetime="2016-10-04T15:14:52+08:00" content="2016-10-04">
               2016-10-04
             </time>
           </span>
@@ -305,8 +302,7 @@
       
 
       
-        <h2 id="JavaScript学习笔记01"><a href="#JavaScript学习笔记01" class="headerlink" title="JavaScript学习笔记01"></a>JavaScript学习笔记01</h2><p>[toc]</p>
-<h3 id="原生函数"><a href="#原生函数" class="headerlink" title="原生函数"></a>原生函数</h3><blockquote>
+        <h3 id="原生函数"><a href="#原生函数" class="headerlink" title="原生函数"></a>原生函数</h3><blockquote>
 <p>原生函数可以当做构造函数来使用，通过构造函数（如 <code>new String(&quot;abc&quot;)</code>）创建出来的是封装了基本类型值（如 <code>&quot;abc&quot;</code>）的封装对象。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span>  string = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">"abc"</span>);</div><div class="line"><span class="built_in">console</span>.log(string);  <span class="comment">// [String: 'abc']</span></div><div class="line"><span class="built_in">console</span>.log(string <span class="keyword">instanceof</span> <span class="built_in">String</span>);  <span class="comment">// true</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> string);  <span class="comment">// object</span></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(string));  <span class="comment">// [object String]</span></div></pre></td></tr></table></figure></p>
 </blockquote>
 <h4 id="内部属性"><a href="#内部属性" class="headerlink" title="内部属性"></a>内部属性</h4><blockquote>
@@ -356,22 +352,24 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScrpt/" rel="tag">#JavaScrpt</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/10/04/My-First-Blog/" rel="next" title="My First Blog">
-                <i class="fa fa-chevron-left"></i> My First Blog
+              <a href="/2016/10/04/你不知道的JavaScript00——原型/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/10/04/你不知道的JavaScript00——原型/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -398,7 +396,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2016/10/04/JavaScript学习笔记01/"
-           data-title="" data-url="http://yoursite.com/2016/10/04/JavaScript学习笔记01/">
+           data-title="JavaScript学习笔记01" data-url="http://yoursite.com/2016/10/04/JavaScript学习笔记01/">
       </div>
     
   </div>
@@ -451,6 +449,13 @@
           
 
           
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">Tags</span>
+              </a>
+            </div>
+          
 
         </nav>
 
@@ -475,7 +480,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript学习笔记01"><span class="nav-number">1.</span> <span class="nav-text">JavaScript学习笔记01</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#原生函数"><span class="nav-number">1.1.</span> <span class="nav-text">原生函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#内部属性"><span class="nav-number">1.1.1.</span> <span class="nav-text">内部属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#封装对象包装"><span class="nav-number">1.1.2.</span> <span class="nav-text">封装对象包装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#拆封"><span class="nav-number">1.1.3.</span> <span class="nav-text">拆封</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#原生函数作为构造函数"><span class="nav-number">1.1.4.</span> <span class="nav-text">原生函数作为构造函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Object-、Function-、RegExp"><span class="nav-number">1.1.5.</span> <span class="nav-text">Object(..)、Function(..)、RegExp(..)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Data-、Error"><span class="nav-number">1.1.6.</span> <span class="nav-text">Data(..)、Error(..)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Symbol"><span class="nav-number">1.1.7.</span> <span class="nav-text">Symbol(..)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#原生原型"><span class="nav-number">1.1.8.</span> <span class="nav-text">原生原型</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#原生函数"><span class="nav-number">1.</span> <span class="nav-text">原生函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#内部属性"><span class="nav-number">1.1.</span> <span class="nav-text">内部属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#封装对象包装"><span class="nav-number">1.2.</span> <span class="nav-text">封装对象包装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#拆封"><span class="nav-number">1.3.</span> <span class="nav-text">拆封</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#原生函数作为构造函数"><span class="nav-number">1.4.</span> <span class="nav-text">原生函数作为构造函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Object-、Function-、RegExp"><span class="nav-number">1.5.</span> <span class="nav-text">Object(..)、Function(..)、RegExp(..)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Data-、Error"><span class="nav-number">1.6.</span> <span class="nav-text">Data(..)、Error(..)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Symbol"><span class="nav-number">1.7.</span> <span class="nav-text">Symbol(..)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#原生原型"><span class="nav-number">1.8.</span> <span class="nav-text">原生原型</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
