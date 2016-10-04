@@ -491,139 +491,227 @@ body {
     width: 900px;
   }
 }
-pre,
-.highlight {
-  overflow: auto;
-  margin: 20px 0;
-  padding: 15px;
-  font-size: 13px;
-  color: #4d4d4c;
-  background: #f7f7f7;
-  line-height: 1.6;
+body {
+  margin: 10px 0 0;
+  font-family: -apple-system, "Helvetica Neue", Arial, "PingFang SC", "苹方 常规", 'Lato', "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  font-size: 15px;
+  border-radius: 30px;
+  font-weight: normal;
+  line-height: 1.7em;
 }
+code,
 pre,
-code {
-  font-family: consolas, Menlo, "PingFang SC", "Microsoft YaHei", monospace;
+#ws,
+#message {
+  font-family: Consolas, Source Code Pro, Menlo, Monaco;
+  font-size: 14p;
+  letter-spacing: 0em;
+  order-radius: 2px;
+  background-color: #fdf6e3;
+  color: inherit;
 }
 code {
+  border: 1px solid #eaeaea;
+  margin: 0 2px;
+  padding: 0 2px;
+  color: #c7254e;
+  background-color: #f9f2f4;
   padding: 2px 4px;
-  word-break: break-all;
-  color: #555;
-  background: #eee;
-  border-radius: 4px;
-  font-size: 13px;
+  border-radius: 3px;
 }
-pre code {
-  padding: 0;
-  color: #4d4d4c;
-  background: none;
-  text-shadow: none;
+pre {
+  border: 1px solid #ccc;
+  overflow: auto;
+  padding: 0px 0px;
 }
-.highlight pre {
-  border: none;
+pre > code {
+  border: 0;
   margin: 0;
-  padding: 1px;
-}
-.highlight table {
-  margin: 0;
-  width: auto;
-  border: none;
-}
-.highlight td {
-  border: none;
   padding: 0;
 }
-.highlight figcaption {
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit;
+}
+.h1,
+.h2,
+.h3,
+h1,
+h2,
+h3 {
+  margin-top: 21px;
+  margin-bottom: 10.5px;
+}
+.h1 .small,
+.h1 small,
+.h2 .small,
+.h2 small,
+.h3 .small,
+.h3 small,
+h1 .small,
+h1 small,
+h2 .small,
+h2 small,
+h3 .small,
+h3 small {
+  font-size: 65%;
+}
+.h4,
+.h5,
+.h6,
+h4,
+h5,
+h6 {
+  margin-top: 10.5px;
+  margin-bottom: 10.5px;
+}
+.h4 .small,
+.h4 small,
+.h5 .small,
+.h5 small,
+.h6 .small,
+.h6 small,
+h4 .small,
+h4 small,
+h5 .small,
+h5 small,
+h6 .small,
+h6 small {
+  font-size: 75%;
+}
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #fdf6e3;
+  color: #657b83;
+}
+.hljs-comment,
+.hljs-quote {
+  color: #006a00;
+}
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal {
+  color: #aa0d91;
+}
+.hljs-name {
+  color: #008;
+}
+.hljs-variable,
+.hljs-template-variable {
+  color: #660;
+}
+.hljs-string {
+  color: #c41a16;
+}
+.hljs-regexp,
+.hljs-link {
+  color: #080;
+}
+.hljs-title,
+.hljs-tag,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-number,
+.hljs-meta {
+  color: #1c00cf;
+}
+.hljs-section,
+.hljs-class .hljs-title,
+.hljs-type,
+.hljs-attr,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-params {
+  color: #5c2699;
+}
+.hljs-attribute,
+.hljs-subst {
+  color: #000;
+}
+.hljs-formula {
+  background-color: #eee;
+  font-style: italic;
+}
+.hljs-addition {
+  background-color: #baeeba;
+}
+.hljs-deletion {
+  background-color: #ffc8bd;
+}
+.hljs-selector-id,
+.hljs-selector-class {
+  color: #9b703f;
+}
+.hljs-doctag,
+.hljs-strong {
+  font-weight: bold;
+}
+.hljs-emphasis {
+  font-style: italic;
+}
+#ws {
+  background-color: #fdf6e3;
+}
+.send {
+  color: #7b7;
+}
+.server {
+  color: #79b;
+}
+.error {
+  color: #a00;
+}
+table tr:nth-child(2n) {
+  background-color: #fdf6e3;
+}
+table {
+  padding: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
   font-size: 1em;
-  color: #4d4d4c;
-  line-height: 1em;
-  margin-bottom: 1em;
+  font: inherit;
+  border: 0;
 }
-.highlight figcaption:before,
-.highlight figcaption:after {
-  content: " ";
-  display: table;
+tbody {
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
-.highlight figcaption:after {
-  clear: both;
+table tr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
 }
-.highlight figcaption a {
-  float: right;
-  color: #4d4d4c;
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
 }
-.highlight figcaption a:hover {
-  border-bottom-color: #4d4d4c;
+table tr th,
+table tr td {
+  font-size: 1em;
+  border: 1px solid #ccc;
+  margin: 0;
+  padding: 0.5em 1em;
 }
-.highlight .gutter pre {
-  color: #666;
-  text-align: right;
-  padding-right: 20px;
-}
-.highlight .line {
-  height: 20px;
-}
-.gist table {
-  width: auto;
-}
-.gist table td {
-  border: none;
-}
-pre .comment {
-  color: #8e908c;
-}
-pre .variable,
-pre .attribute,
-pre .tag,
-pre .regexp,
-pre .ruby .constant,
-pre .xml .tag .title,
-pre .xml .pi,
-pre .xml .doctype,
-pre .html .doctype,
-pre .css .id,
-pre .css .class,
-pre .css .pseudo {
-  color: #c82829;
-}
-pre .number,
-pre .preprocessor,
-pre .built_in,
-pre .literal,
-pre .params,
-pre .constant,
-pre .command {
-  color: #f5871f;
-}
-pre .ruby .class .title,
-pre .css .rules .attribute,
-pre .string,
-pre .value,
-pre .inheritance,
-pre .header,
-pre .ruby .symbol,
-pre .xml .cdata,
-pre .special,
-pre .number,
-pre .formula {
-  color: #718c00;
-}
-pre .title,
-pre .css .hexcolor {
-  color: #3e999f;
-}
-pre .function,
-pre .python .decorator,
-pre .python .title,
-pre .ruby .function .title,
-pre .ruby .title .keyword,
-pre .perl .sub,
-pre .javascript .title,
-pre .coffeescript .title {
-  color: #4271ae;
-}
-pre .keyword,
-pre .javascript .function {
-  color: #8959a8;
+table tr th {
+  font-weight: bold;
+  background-color: #f0f0f0;
 }
 .full-image.full-image.full-image {
   border: none;
@@ -1548,7 +1636,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #eea35b;
+  background: #0ff;
 }
 .links-of-blogroll {
   font-size: 13px;
