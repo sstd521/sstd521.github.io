@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="JavaScript," />
+  <meta name="keywords" content="JavaScript,cocos," />
 
 
 
@@ -84,19 +84,16 @@
 
 
 
-<meta name="description" content="JavaScript 中的对象有一个特殊的 [[Prototype]] 内置属性，其实就是对于其他对象的引用。几乎所有的对象在创建时 [[Prototype]] 属性都会被赋予一个非空的值。
-使用 for..in 遍历对象时原理和查找 [[Prototype]] 链类似，任何可以通过原型链访问到（并且是 enumerable ，）的属性都会被枚举。使用 in 操作符来检查属性在对象中是否存在时，">
+<meta name="description" content="JavaScript 中的对象有一个特殊的 [[Prototype]] 内置属性，其实就是对于其他对象的引用。几乎所有的对象在创建时 [[Prototype]] 属性都会被赋予一个非空的值。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="你不知道的JavaScript00——原型">
 <meta property="og:url" content="http://yoursite.com/2016/10/04/你不知道的JavaScript00——原型/index.html">
 <meta property="og:site_name" content="WeekNote">
-<meta property="og:description" content="JavaScript 中的对象有一个特殊的 [[Prototype]] 内置属性，其实就是对于其他对象的引用。几乎所有的对象在创建时 [[Prototype]] 属性都会被赋予一个非空的值。
-使用 for..in 遍历对象时原理和查找 [[Prototype]] 链类似，任何可以通过原型链访问到（并且是 enumerable ，）的属性都会被枚举。使用 in 操作符来检查属性在对象中是否存在时，">
-<meta property="og:updated_time" content="2016-10-04T07:38:00.396Z">
+<meta property="og:description" content="JavaScript 中的对象有一个特殊的 [[Prototype]] 内置属性，其实就是对于其他对象的引用。几乎所有的对象在创建时 [[Prototype]] 属性都会被赋予一个非空的值。">
+<meta property="og:updated_time" content="2016-10-04T09:48:11.988Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="你不知道的JavaScript00——原型">
-<meta name="twitter:description" content="JavaScript 中的对象有一个特殊的 [[Prototype]] 内置属性，其实就是对于其他对象的引用。几乎所有的对象在创建时 [[Prototype]] 属性都会被赋予一个非空的值。
-使用 for..in 遍历对象时原理和查找 [[Prototype]] 链类似，任何可以通过原型链访问到（并且是 enumerable ，）的属性都会被枚举。使用 in 操作符来检查属性在对象中是否存在时，">
+<meta name="twitter:description" content="JavaScript 中的对象有一个特殊的 [[Prototype]] 内置属性，其实就是对于其他对象的引用。几乎所有的对象在创建时 [[Prototype]] 属性都会被赋予一个非空的值。">
 
 
 
@@ -268,6 +265,25 @@
           </span>
 
           
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
 
           
             
@@ -304,7 +320,7 @@
       
         <blockquote>
 <p>JavaScript 中的对象有一个特殊的 [[Prototype]] 内置属性，其实就是对于其他对象的引用。几乎所有的对象在创建时 [[Prototype]] 属性都会被赋予一个非空的值。</p>
-<p>使用 for..in 遍历对象时原理和查找 [[Prototype]] 链类似，任何可以通过原型链访问到（并且是 enumerable ，）的属性都会被枚举。使用 in 操作符来检查属性在对象中是否存在时，同样会查找对象的整条原型链（无论属性是否可枚举）<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> anotherObject = &#123;</div><div class="line"><span class="attr">a</span>:<span class="number">2</span></div><div class="line">&#125;;</div><div class="line"><span class="comment">// 创建一个关联到 anotherObject 的对象</span></div><div class="line"><span class="keyword">var</span> myObject = <span class="built_in">Object</span>.create( anotherObject );</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> k <span class="keyword">in</span> myObject) &#123;</div><div class="line"><span class="built_in">console</span>.log(<span class="string">"found: "</span> + k);</div><div class="line">&#125;</div><div class="line"><span class="comment">// found: a</span></div><div class="line">(<span class="string">"a"</span> <span class="keyword">in</span> myObject); <span class="comment">// true</span></div><div class="line">myObject.foo = <span class="string">"bar"</span>;</div></pre></td></tr></table></figure></p>
+<p>使用 for..in 遍历对象时原理和查找 [[Prototype]] 链类似，任何可以通过原型链访问到（并且是 enumerable ，）的属性都会被枚举。使用 in 操作符来检查属性在对象中是否存在时，同样会查找对象的整条原型链（无论属性是否可枚举）<br><a id="more"></a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> anotherObject = &#123;</div><div class="line"><span class="attr">a</span>:<span class="number">2</span></div><div class="line">&#125;;</div><div class="line"><span class="comment">// 创建一个关联到 anotherObject 的对象</span></div><div class="line"><span class="keyword">var</span> myObject = <span class="built_in">Object</span>.create( anotherObject );</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> k <span class="keyword">in</span> myObject) &#123;</div><div class="line"><span class="built_in">console</span>.log(<span class="string">"found: "</span> + k);</div><div class="line">&#125;</div><div class="line"><span class="comment">// found: a</span></div><div class="line">(<span class="string">"a"</span> <span class="keyword">in</span> myObject); <span class="comment">// true</span></div><div class="line">myObject.foo = <span class="string">"bar"</span>;</div></pre></td></tr></table></figure></p>
 <p>如果 myObject 对象中包含名为 foo 的普通数据访问属性，这条赋值语句只会修改已有的属<br>性值。<br>如果 foo 不是直接存在于 myObject 中， [[Prototype]] 链就会被遍历，类似 [[Get]] 操作。<br>如果原型链上找不到 foo ， foo 就会被直接添加到 myObject 上。</p>
 <p>所有的函数默认都会拥有一个名为 prototype 的公有并且不可枚举（参见第 3 章）的属性，它会指向另一个对象。<br>这个对象通常被称为 Foo 的原型，因为我们通过名为 Foo.prototype 的属性引用来访问它。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params"></span>) </span>&#123;</div><div class="line"><span class="comment">// ...</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> a = <span class="keyword">new</span> Foo();</div><div class="line"><span class="built_in">Object</span>.getPrototypeOf( a ) === Foo.prototype; <span class="comment">// true</span></div></pre></td></tr></table></figure></p>
 <p>在 JavaScript 中，我们并不会将一个对象（“类”）复制到另一个对象（“实例”），只是将它们<br>关联起来。</p>
@@ -335,6 +351,8 @@
           
             <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
           
+            <a href="/tags/cocos/" rel="tag">#cocos</a>
+          
         </div>
       
 
@@ -349,6 +367,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/10/04/在hexo-new之后立马打开Markdown文稿/" rel="prev" title="在hexo new之后立马打开Markdown文稿">
+                在hexo new之后立马打开Markdown文稿 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -420,17 +442,24 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
 
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -448,6 +477,24 @@
         
 
         
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://iwenk.com/" title="爱问客" target="_blank">爱问客</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="weibo.com/sstd521" title="微博" target="_blank">微博</a>
+                </li>
+              
+            </ul>
+          </div>
         
 
       </section>
