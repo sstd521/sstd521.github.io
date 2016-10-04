@@ -84,13 +84,25 @@
 
 
 
+<meta name="description" content="###你不知道的JavaScript——原型
+
+JavaScript 中的对象有一个特殊的 [[Prototype]] 内置属性，其实就是对于其他对象的引用。几乎所有的对象在创建时 [[Prototype]] 属性都会被赋予一个非空的值。
+使用 for..in 遍历对象时原理和查找 [[Prototype]] 链类似，任何可以通过原型链访问到（并且是 enumerable ，）的属性都会被枚举。使">
 <meta property="og:type" content="article">
-<meta property="og:title" content="My First Blog">
-<meta property="og:url" content="http://yoursite.com/2016/10/04/My-First-Blog/index.html">
+<meta property="og:title" content="WeekNote">
+<meta property="og:url" content="http://yoursite.com/2016/10/04/你不知道的JavaScript00——原型/index.html">
 <meta property="og:site_name" content="WeekNote">
-<meta property="og:updated_time" content="2016-10-04T02:44:37.033Z">
+<meta property="og:description" content="###你不知道的JavaScript——原型
+
+JavaScript 中的对象有一个特殊的 [[Prototype]] 内置属性，其实就是对于其他对象的引用。几乎所有的对象在创建时 [[Prototype]] 属性都会被赋予一个非空的值。
+使用 for..in 遍历对象时原理和查找 [[Prototype]] 链类似，任何可以通过原型链访问到（并且是 enumerable ，）的属性都会被枚举。使">
+<meta property="og:updated_time" content="2016-10-04T05:19:02.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="My First Blog">
+<meta name="twitter:title" content="WeekNote">
+<meta name="twitter:description" content="###你不知道的JavaScript——原型
+
+JavaScript 中的对象有一个特殊的 [[Prototype]] 内置属性，其实就是对于其他对象的引用。几乎所有的对象在创建时 [[Prototype]] 属性都会被赋予一个非空的值。
+使用 for..in 遍历对象时原理和查找 [[Prototype]] 链类似，任何可以通过原型链访问到（并且是 enumerable ，）的属性都会被枚举。使">
 
 
 
@@ -111,9 +123,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/10/04/My-First-Blog/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/10/04/你不知道的JavaScript00——原型/"/>
 
-  <title> My First Blog | WeekNote </title>
+  <title>  | WeekNote </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -244,7 +256,7 @@
             
             
               
-                My First Blog
+                
               
             
           </h1>
@@ -256,7 +268,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2016-10-04T10:44:36+08:00" content="2016-10-04">
+            <time itemprop="dateCreated" datetime="2016-10-04T13:20:48+08:00" content="2016-10-04">
               2016-10-04
             </time>
           </span>
@@ -267,8 +279,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/10/04/My-First-Blog/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/04/My-First-Blog/" itemprop="commentsCount"></span>
+                <a href="/2016/10/04/你不知道的JavaScript00——原型/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/04/你不知道的JavaScript00——原型/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -296,7 +308,17 @@
       
 
       
-        
+        <p>###你不知道的JavaScript——原型</p>
+<blockquote>
+<p>JavaScript 中的对象有一个特殊的 [[Prototype]] 内置属性，其实就是对于其他对象的引用。几乎所有的对象在创建时 [[Prototype]] 属性都会被赋予一个非空的值。</p>
+<p>使用 for..in 遍历对象时原理和查找 [[Prototype]] 链类似，任何可以通过原型链访问到（并且是 enumerable ，）的属性都会被枚举。使用 in 操作符来检查属性在对象中是否存在时，同样会查找对象的整条原型链（无论属性是否可枚举）<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> anotherObject = &#123;</div><div class="line"><span class="attr">a</span>:<span class="number">2</span></div><div class="line">&#125;;</div><div class="line"><span class="comment">// 创建一个关联到 anotherObject 的对象</span></div><div class="line"><span class="keyword">var</span> myObject = <span class="built_in">Object</span>.create( anotherObject );</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> k <span class="keyword">in</span> myObject) &#123;</div><div class="line"><span class="built_in">console</span>.log(<span class="string">"found: "</span> + k);</div><div class="line">&#125;</div><div class="line"><span class="comment">// found: a</span></div><div class="line">(<span class="string">"a"</span> <span class="keyword">in</span> myObject); <span class="comment">// true</span></div><div class="line">myObject.foo = <span class="string">"bar"</span>;</div></pre></td></tr></table></figure></p>
+<p>如果 myObject 对象中包含名为 foo 的普通数据访问属性，这条赋值语句只会修改已有的属<br>性值。<br>如果 foo 不是直接存在于 myObject 中， [[Prototype]] 链就会被遍历，类似 [[Get]] 操作。<br>如果原型链上找不到 foo ， foo 就会被直接添加到 myObject 上。</p>
+<p>所有的函数默认都会拥有一个名为 prototype 的公有并且不可枚举（参见第 3 章）的属性，它会指向另一个对象。<br>这个对象通常被称为 Foo 的原型，因为我们通过名为 Foo.prototype 的属性引用来访问它。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params"></span>) </span>&#123;</div><div class="line"><span class="comment">// ...</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> a = <span class="keyword">new</span> Foo();</div><div class="line"><span class="built_in">Object</span>.getPrototypeOf( a ) === Foo.prototype; <span class="comment">// true</span></div></pre></td></tr></table></figure></p>
+<p>在 JavaScript 中，我们并不会将一个对象（“类”）复制到另一个对象（“实例”），只是将它们<br>关联起来。</p>
+<p>继承意味着复制操作，JavaScript（默认）并不会复制对象属性。相反，JavaScript 会在两个对象之间创建一个关联，这样一个对象就可以通过委托访问另一个对象的属性和函数。委托这个术语可以更加准确地描述 JavaScript 中对象的关联机制。</p>
+<p>普通的函数调用前面加上 new 关键字之后，就会把这个函数调用变成一个“构造函数<br>调用”。实际上， new 会劫持所有普通函数并用构造对象的形式来调用它。</p>
+</blockquote>
+
       
     </div>
 
@@ -321,17 +343,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/10/04/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2016/10/04/JavaScript学习笔记01/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/10/04/JavaScript学习笔记01/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -357,8 +375,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/10/04/My-First-Blog/"
-           data-title="My First Blog" data-url="http://yoursite.com/2016/10/04/My-First-Blog/">
+      <div class="ds-thread" data-thread-key="2016/10/04/你不知道的JavaScript00——原型/"
+           data-title="" data-url="http://yoursite.com/2016/10/04/你不知道的JavaScript00——原型/">
       </div>
     
   </div>
