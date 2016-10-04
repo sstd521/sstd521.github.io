@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-10-04T11:03:21.032Z</updated>
+  <updated>2016-10-04T13:13:05.984Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,43 +16,15 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>在hexo new之后立马打开Markdown文稿</title>
-    <link href="http://yoursite.com/2016/10/04/%E5%9C%A8hexo-new%E4%B9%8B%E5%90%8E%E7%AB%8B%E9%A9%AC%E6%89%93%E5%BC%80Markdown%E6%96%87%E7%A8%BF/"/>
-    <id>http://yoursite.com/2016/10/04/在hexo-new之后立马打开Markdown文稿/</id>
-    <published>2016-10-04T10:57:15.000Z</published>
-    <updated>2016-10-04T11:03:21.032Z</updated>
-    
-    <content type="html"><![CDATA[<p>##在hexo new之后立即用马克飞象打开Markdown文稿</p>
-<h2 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h2><p>　　　在根目录新建一个文件夹scripts(因为本来没有，只能新建)，然后新建txt文本文件，重命名为 “open_editor_after_hexo_new_immediately.js”，这个在Windows下干活的人都知道吧，名字可以随便，不过我觉得这个名字比较好认，你以后可能要改也方便。</p>
-<p>##第二步:<br>　　　随便用一个文本编辑器打开，我是习惯用Sublime Text。修改内容如下:<br>　　　<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> exec = <span class="built_in">require</span>(<span class="string">'child_process'</span>).exec;</div><div class="line"><span class="comment">// Hexo 2.x 传进来的参数即是路径</span></div><div class="line"><span class="comment">/*</span></div><div class="line">hexo.on('new', function(path)&#123;</div><div class="line">    exec('"S:\\Hexo\\MarkdownPad2\\MarkdownPad2.exe" ' + "\"" + [path] + "\"");</div><div class="line">&#125;);</div><div class="line">*/</div><div class="line"><span class="comment">// Hexo 3 传进来的参数是一个&#123;&#125;定义的多属性对象，</span></div><div class="line"><span class="comment">// 参见"hexo根目录/node_modules/hexo/lib/plugins/console/new.js"</span></div><div class="line">hexo.on(<span class="string">'new'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</div><div class="line">    exec(<span class="string">'"C:/Program Files (x86)/Maxiang/maxiang.exe" '</span> + <span class="string">"\""</span> + [data.path] + <span class="string">"\""</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;##在hexo new之后立即用马克飞象打开Markdown文稿&lt;/p&gt;
-&lt;h2 id=&quot;第一步&quot;&gt;&lt;a href=&quot;#第一步&quot; class=&quot;headerlink&quot; title=&quot;第一步&quot;&gt;&lt;/a&gt;第一步&lt;/h2&gt;&lt;p&gt;　　　在根目录新建一个文件夹scripts(因为本来
-    
-    </summary>
-    
-    
-      <category term="MarkDown" scheme="http://yoursite.com/tags/MarkDown/"/>
-    
-      <category term="Typora" scheme="http://yoursite.com/tags/Typora/"/>
-    
-      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
     <title>你不知道的JavaScript00——原型</title>
     <link href="http://yoursite.com/2016/10/04/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84JavaScript00%E2%80%94%E2%80%94%E5%8E%9F%E5%9E%8B/"/>
     <id>http://yoursite.com/2016/10/04/你不知道的JavaScript00——原型/</id>
     <published>2016-10-04T07:32:08.000Z</published>
-    <updated>2016-10-04T09:48:11.988Z</updated>
+    <updated>2016-10-04T13:13:05.984Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>JavaScript 中的对象有一个特殊的 [[Prototype]] 内置属性，其实就是对于其他对象的引用。几乎所有的对象在创建时 [[Prototype]] 属性都会被赋予一个非空的值。</p>
-<p>使用 for..in 遍历对象时原理和查找 [[Prototype]] 链类似，任何可以通过原型链访问到（并且是 enumerable ，）的属性都会被枚举。使用 in 操作符来检查属性在对象中是否存在时，同样会查找对象的整条原型链（无论属性是否可枚举）<br><a id="more"></a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> anotherObject = &#123;</div><div class="line"><span class="attr">a</span>:<span class="number">2</span></div><div class="line">&#125;;</div><div class="line"><span class="comment">// 创建一个关联到 anotherObject 的对象</span></div><div class="line"><span class="keyword">var</span> myObject = <span class="built_in">Object</span>.create( anotherObject );</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> k <span class="keyword">in</span> myObject) &#123;</div><div class="line"><span class="built_in">console</span>.log(<span class="string">"found: "</span> + k);</div><div class="line">&#125;</div><div class="line"><span class="comment">// found: a</span></div><div class="line">(<span class="string">"a"</span> <span class="keyword">in</span> myObject); <span class="comment">// true</span></div><div class="line">myObject.foo = <span class="string">"bar"</span>;</div></pre></td></tr></table></figure></p>
+<p>使用 for..in 遍历对象时原理和查找 [[Prototype]] 链类似，任何可以通过原型链访问到（并且是 enumerable ，）的属性都会被枚举。使用 in 操作符来检查属性在对象中是否存在时，同样会查找对象的整条原型链（无论属性是否可枚举）<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> anotherObject = &#123;</div><div class="line"><span class="attr">a</span>:<span class="number">2</span></div><div class="line">&#125;;</div><div class="line"><span class="comment">// 创建一个关联到 anotherObject 的对象</span></div><div class="line"><span class="keyword">var</span> myObject = <span class="built_in">Object</span>.create( anotherObject );</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> k <span class="keyword">in</span> myObject) &#123;</div><div class="line"><span class="built_in">console</span>.log(<span class="string">"found: "</span> + k);</div><div class="line">&#125;</div><div class="line"><span class="comment">// found: a</span></div><div class="line">(<span class="string">"a"</span> <span class="keyword">in</span> myObject); <span class="comment">// true</span></div><div class="line">myObject.foo = <span class="string">"bar"</span>;</div></pre></td></tr></table></figure></p>
 <p>如果 myObject 对象中包含名为 foo 的普通数据访问属性，这条赋值语句只会修改已有的属<br>性值。<br>如果 foo 不是直接存在于 myObject 中， [[Prototype]] 链就会被遍历，类似 [[Get]] 操作。<br>如果原型链上找不到 foo ， foo 就会被直接添加到 myObject 上。</p>
 <p>所有的函数默认都会拥有一个名为 prototype 的公有并且不可枚举（参见第 3 章）的属性，它会指向另一个对象。<br>这个对象通常被称为 Foo 的原型，因为我们通过名为 Foo.prototype 的属性引用来访问它。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params"></span>) </span>&#123;</div><div class="line"><span class="comment">// ...</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> a = <span class="keyword">new</span> Foo();</div><div class="line"><span class="built_in">Object</span>.getPrototypeOf( a ) === Foo.prototype; <span class="comment">// true</span></div></pre></td></tr></table></figure></p>
 <p>在 JavaScript 中，我们并不会将一个对象（“类”）复制到另一个对象（“实例”），只是将它们<br>关联起来。</p>
@@ -73,57 +45,6 @@
       <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
     
       <category term="cocos" scheme="http://yoursite.com/tags/cocos/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript学习笔记01</title>
-    <link href="http://yoursite.com/2016/10/04/JavaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B001/"/>
-    <id>http://yoursite.com/2016/10/04/JavaScript学习笔记01/</id>
-    <published>2016-10-04T07:14:52.000Z</published>
-    <updated>2016-10-04T07:16:09.361Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="原生函数"><a href="#原生函数" class="headerlink" title="原生函数"></a>原生函数</h3><blockquote>
-<p>原生函数可以当做构造函数来使用，通过构造函数（如 <code>new String(&quot;abc&quot;)</code>）创建出来的是封装了基本类型值（如 <code>&quot;abc&quot;</code>）的封装对象。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span>  string = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">"abc"</span>);</div><div class="line"><span class="built_in">console</span>.log(string);  <span class="comment">// [String: 'abc']</span></div><div class="line"><span class="built_in">console</span>.log(string <span class="keyword">instanceof</span> <span class="built_in">String</span>);  <span class="comment">// true</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> string);  <span class="comment">// object</span></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(string));  <span class="comment">// [object String]</span></div></pre></td></tr></table></figure></p>
-</blockquote>
-<h4 id="内部属性"><a href="#内部属性" class="headerlink" title="内部属性"></a>内部属性</h4><blockquote>
-<p>所有typeof返回值为<code>&quot;object&quot;</code>的对象都包含了一个内部属性，可以通过<code>Object.prototype.toString(..)</code>查看。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]))  <span class="comment">// [object Array]</span></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="literal">true</span>))  <span class="comment">// [object Boolean]</span></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="number">42</span>))  <span class="comment">// [object Number]</span></div></pre></td></tr></table></figure></p>
-</blockquote>
-<h4 id="封装对象包装"><a href="#封装对象包装" class="headerlink" title="封装对象包装"></a>封装对象包装</h4><blockquote>
-<p>基本类型没有 <code>.length</code>和<code>.toString()</code>等这样的属性和方法，需要封装对象才可使用，此时JavaScript会为基本类型值自动包装成一个封装对象，浏览器对此也进行了优化，因此应优先考虑用基本类型值，而不是<code>new  String(&quot;abc&quot;)</code>新对象。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span>  a = <span class="string">"abc"</span>;</div><div class="line"><span class="built_in">console</span>.log(a.length); <span class="comment">// 3</span></div><div class="line"><span class="built_in">console</span>.log(a.toUpperCase()); <span class="comment">//ABC</span></div></pre></td></tr></table></figure></p>
-<p>一般不推荐直接使用封装对象，如果想要自行封装基本类型值，可以使用<code>Object(..)</code>函数（不带<code>new</code>关键字）。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="string">"abc"</span>;</div><div class="line"><span class="keyword">var</span> b = <span class="keyword">new</span> <span class="built_in">String</span>(a);</div><div class="line"><span class="keyword">var</span> c = <span class="built_in">Object</span>(a);</div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> a);  <span class="comment">// string</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> b);  <span class="comment">// object</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> c);  <span class="comment">// object</span></div><div class="line"><span class="built_in">console</span>.log(b <span class="keyword">instanceof</span> <span class="built_in">String</span>);  <span class="comment">// true</span></div><div class="line"><span class="built_in">console</span>.log(c <span class="keyword">instanceof</span> <span class="built_in">String</span>);  <span class="comment">// true</span></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(b));  <span class="comment">// [object String]</span></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(c)); <span class="comment">// [object String]</span></div></pre></td></tr></table></figure></p>
-</blockquote>
-<h4 id="拆封"><a href="#拆封" class="headerlink" title="拆封"></a>拆封</h4><blockquote>
-<p>如果想要得到封装对象的基本类型值，可以使用valueof()函数:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">"abc"</span>);</div><div class="line"><span class="keyword">var</span> b = <span class="keyword">new</span> <span class="built_in">Boolean</span>(<span class="literal">true</span>);</div><div class="line">a.valueof();  <span class="comment">// "abc"</span></div><div class="line">b.valueof();  <span class="comment">// true</span></div></pre></td></tr></table></figure></p>
-</blockquote>
-<h4 id="原生函数作为构造函数"><a href="#原生函数作为构造函数" class="headerlink" title="原生函数作为构造函数"></a>原生函数作为构造函数</h4><blockquote>
-<p>构造函数<code>Array(..)</code>不要求必须带<code>new</code>关键字，不带时，系统会自动补上。<code>Array</code>构造函数只带一个数字参数的时候，该参数会被当做数组的预设长度，而非一个元素。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="built_in">Array</span>(<span class="number">3</span>);</div><div class="line"><span class="built_in">console</span>.log(a.length);  <span class="comment">// 3</span></div></pre></td></tr></table></figure></p>
-<p>创建包含<code>undefined</code>的数组：<code>apply(..)</code>是一个工具，适用于所有对象，它会以一种特殊的方式来调用传递给它的函数。第一个参数是<code>this</code>对象，第二个必须是一个数组（或类数组对象，array-like object），数组中的值被用作函数的参数。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="built_in">Array</span>.apply(<span class="literal">null</span>,&#123; <span class="attr">length</span>:<span class="number">3</span>&#125;);</div><div class="line"><span class="built_in">console</span>.log(a);  <span class="comment">// [ undefined, undefined, undefined ]</span></div></pre></td></tr></table></figure></p>
-</blockquote>
-<h4 id="Object-、Function-、RegExp"><a href="#Object-、Function-、RegExp" class="headerlink" title="Object(..)、Function(..)、RegExp(..)"></a>Object(..)、Function(..)、RegExp(..)</h4><blockquote>
-<p>尽量不要使用<code>Object(..)、Function(..)、Regexp(..)</code>，在实际情况中没有必要使用<code>new Object()</code>来创建对象，因为这样无法像常量形式那样一次设定多个属性，而必须逐一设定。强烈建议使用常量形式定义正则表达式，语法简单、效率高。</p>
-<h4 id="Data-、Error"><a href="#Data-、Error" class="headerlink" title="Data(..)、Error(..)"></a>Data(..)、Error(..)</h4><p>创建日起对象必须使用<code>new Date()</code>。<code>Date(..)</code>可以带参数，用来指定日期时间，若不带参数则使用当前的如期和时间。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log((<span class="keyword">new</span> <span class="built_in">Date</span>()).getDate());  <span class="comment">// 28</span></div></pre></td></tr></table></figure></p>
-<p>构造函数<code>Error(..)</code>,带不带<code>new</code>关键字都可以。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">x</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (!x)</div><div class="line">  <span class="keyword">throw</span>  <span class="built_in">Error</span>(<span class="string">"x not found"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-</blockquote>
-<h4 id="Symbol"><a href="#Symbol" class="headerlink" title="Symbol(..)"></a>Symbol(..)</h4><blockquote>
-<p>基本数据类型，符号(<code>Symbol</code>)是具有唯一性的特殊值，用它来命名对象属性不容易导致重名，符号还可以自行定义，<code>Symbol</code>以静态属性形式出现，如<code>Symbol.create</code>等、不能用<code>new</code>关键字创建。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> mysym  = <span class="built_in">Symbol</span>(<span class="string">"abcd"</span>);</div><div class="line"><span class="built_in">console</span>.log(mysym);  <span class="comment">// Symbol(abcd)</span></div><div class="line"><span class="keyword">var</span> a = &#123;&#125;;</div><div class="line">a[mysym] = <span class="string">"apple"</span>;</div><div class="line"><span class="built_in">console</span>.log(a[mysym]);  <span class="comment">// apple</span></div></pre></td></tr></table></figure></p>
-</blockquote>
-<h4 id="原生原型"><a href="#原生原型" class="headerlink" title="原生原型"></a>原生原型</h4><blockquote>
-<p>原生构造函数都有自己的<code>.prototype</code>对象，如<code>Array.prototype</code>等，这些对象包含其对应子类型所有的行为特征。比如将字符串封装成字符串对象，就可以访问<code>String.prototype</code>中定义的方法。</p>
-<p>根据文档约定，可将<code>.prototype.</code>替换为<code>#</code>，如<code>String.prototype.trim()</code>简写为<code>String#trim()</code>来去掉字符串的前后空格，<code>Array#concat(..)</code>合并数组，<code>Number#tofixed(..)</code>将数字转换为指定长度的整数字符串，其他对象同样如此。</p>
-<p><code>Function.prototype</code>是一个空函数，<code>Array.prototype</code>是一个空数组，<code>RegExp.prototype</code>是一个空正则表达式，对未赋值的变量来说，它们是很好的默认值，在ES6中可通过函数声明的内置语法来设置(取而代之)。</p>
-</blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;原生函数&quot;&gt;&lt;a href=&quot;#原生函数&quot; class=&quot;headerlink&quot; title=&quot;原生函数&quot;&gt;&lt;/a&gt;原生函数&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;原生函数可以当做构造函数来使用，通过构造函数（如 &lt;code&gt;new String(&amp;quot;a
-    
-    </summary>
-    
-    
-      <category term="JavaScrpt" scheme="http://yoursite.com/tags/JavaScrpt/"/>
     
   </entry>
   
