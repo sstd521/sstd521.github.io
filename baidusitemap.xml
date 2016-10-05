@@ -4,16 +4,34 @@
 
     
   <url>
-    <loc>http://yoursite.com/2016/10/04/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84JavaScript00%E2%80%94%E2%80%94%E5%8E%9F%E5%9E%8B/</loc>
-    <lastmod>2016-10-04T13:13:05.984Z</lastmod>
+    <loc>http://yoursite.com/2016/10/05/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84JavaScript01-%E5%8E%9F%E7%94%9F%E5%87%BD%E6%95%B0/</loc>
+    <lastmod>2016-10-05T04:42:33.840Z</lastmod>
     <data>
         <display>
-        <title>你不知道的JavaScript00——原型</title>
-        <pubTime>2016-10-04T07:32:08.000Z</pubTime>
+        <title>你不知道的JavaScript01--原生函数</title>
+        <pubTime>2016-10-05T04:37:22.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
-        <tag>cocos</tag>
+         
+           
+             
+              <breadCrumb title="前端" url="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/10/05/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84JavaScript00%E2%80%94%E2%80%94%E5%8E%9F%E5%9E%8B/</loc>
+    <lastmod>2016-10-05T04:40:22.522Z</lastmod>
+    <data>
+        <display>
+        <title>你不知道的JavaScript00——原型</title>
+        <pubTime>2016-10-05T04:21:43.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
          
          
            
@@ -27,21 +45,6 @@
     
     
     
-    
-  <url>
-    <loc>http://yoursite.com/2016/10/04/My-First-Blog/</loc>
-    <lastmod>2016-10-04T02:44:37.033Z</lastmod>
-    <data>
-        <display>
-        <title>My First Blog</title>
-        <pubTime>2016-10-04T02:44:36.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>http://yoursite.com/2016/10/04/hello-world/</loc>

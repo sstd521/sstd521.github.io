@@ -1,0 +1,723 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="JavaScript," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="WeekNote" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="原生函数可以当做构造函数来使用，通过构造函数（如 new String(&quot;abc&quot;)）创建出来的是封装了基本类型值（如 &quot;abc&quot;）的封装对象。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="你不知道的JavaScript01--原生函数">
+<meta property="og:url" content="http://yoursite.com/2016/10/05/你不知道的JavaScript01-原生函数/index.html">
+<meta property="og:site_name" content="WeekNote">
+<meta property="og:description" content="原生函数可以当做构造函数来使用，通过构造函数（如 new String(&quot;abc&quot;)）创建出来的是封装了基本类型值（如 &quot;abc&quot;）的封装对象。">
+<meta property="og:updated_time" content="2016-10-05T04:42:33.840Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="你不知道的JavaScript01--原生函数">
+<meta name="twitter:description" content="原生函数可以当做构造函数来使用，通过构造函数（如 new String(&quot;abc&quot;)）创建出来的是封装了基本类型值（如 &quot;abc&quot;）的封装对象。">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/10/05/你不知道的JavaScript01-原生函数/"/>
+
+  <title> 你不知道的JavaScript01--原生函数 | WeekNote </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">WeekNote</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">publish at least one note a week</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                你不知道的JavaScript01--原生函数
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-05T12:37:22+08:00" content="2016-10-05">
+              2016-10-05
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/05/你不知道的JavaScript01-原生函数/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/05/你不知道的JavaScript01-原生函数/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+          
+          <span>&nbsp; | &nbsp;
+          <span id="busuanzi_value_page_pv" ></span>次阅读
+          </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="JavaScript学习笔记01"><a href="#JavaScript学习笔记01" class="headerlink" title="JavaScript学习笔记01"></a>JavaScript学习笔记01</h2><p>@(JavaScript)</p>
+<h3 id="原生函数"><a href="#原生函数" class="headerlink" title="原生函数"></a>原生函数</h3><blockquote>
+<p>原生函数可以当做构造函数来使用，通过构造函数（如 <code>new String(&quot;abc&quot;)</code>）创建出来的是封装了基本类型值（如 <code>&quot;abc&quot;</code>）的封装对象。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span>  string = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">"abc"</span>);</div><div class="line"><span class="built_in">console</span>.log(string);  <span class="comment">// [String: 'abc']</span></div><div class="line"><span class="built_in">console</span>.log(string <span class="keyword">instanceof</span> <span class="built_in">String</span>);  <span class="comment">// true</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> string);  <span class="comment">// object</span></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(string));  <span class="comment">// [object String]</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+<h4 id="内部属性"><a href="#内部属性" class="headerlink" title="内部属性"></a>内部属性</h4><blockquote>
+<p>所有typeof返回值为<code>&quot;object&quot;</code>的对象都包含了一个内部属性，可以通过<code>Object.prototype.toString(..)</code>查看。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]))  <span class="comment">// [object Array]</span></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="literal">true</span>))  <span class="comment">// [object Boolean]</span></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="number">42</span>))  <span class="comment">// [object Number]</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+<h4 id="封装对象包装"><a href="#封装对象包装" class="headerlink" title="封装对象包装"></a>封装对象包装</h4><blockquote>
+<p>基本类型没有 <code>.length</code>和<code>.toString()</code>等这样的属性和方法，需要封装对象才可使用，此时JavaScript会为基本类型值自动包装成一个封装对象，浏览器对此也进行了优化，因此应优先考虑用基本类型值，而不是<code>new  String(&quot;abc&quot;)</code>新对象。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span>  a = <span class="string">"abc"</span>;</div><div class="line"><span class="built_in">console</span>.log(a.length); <span class="comment">// 3</span></div><div class="line"><span class="built_in">console</span>.log(a.toUpperCase()); <span class="comment">//ABC</span></div></pre></td></tr></table></figure></p>
+<p>一般不推荐直接使用封装对象，如果想要自行封装基本类型值，可以使用<code>Object(..)</code>函数（不带<code>new</code>关键字）。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="string">"abc"</span>;</div><div class="line"><span class="keyword">var</span> b = <span class="keyword">new</span> <span class="built_in">String</span>(a);</div><div class="line"><span class="keyword">var</span> c = <span class="built_in">Object</span>(a);</div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> a);  <span class="comment">// string</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> b);  <span class="comment">// object</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> c);  <span class="comment">// object</span></div><div class="line"><span class="built_in">console</span>.log(b <span class="keyword">instanceof</span> <span class="built_in">String</span>);  <span class="comment">// true</span></div><div class="line"><span class="built_in">console</span>.log(c <span class="keyword">instanceof</span> <span class="built_in">String</span>);  <span class="comment">// true</span></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(b));  <span class="comment">// [object String]</span></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(c)); <span class="comment">// [object String]</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+<h4 id="拆封"><a href="#拆封" class="headerlink" title="拆封"></a>拆封</h4><blockquote>
+<p>如果想要得到封装对象的基本类型值，可以使用valueof()函数:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">"abc"</span>);</div><div class="line"><span class="keyword">var</span> b = <span class="keyword">new</span> <span class="built_in">Boolean</span>(<span class="literal">true</span>);</div><div class="line">a.valueof();  <span class="comment">// "abc"</span></div><div class="line">b.valueof();  <span class="comment">// true</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+<h4 id="原生函数作为构造函数"><a href="#原生函数作为构造函数" class="headerlink" title="原生函数作为构造函数"></a>原生函数作为构造函数</h4><blockquote>
+<p>构造函数<code>Array(..)</code>不要求必须带<code>new</code>关键字，不带时，系统会自动补上。<code>Array</code>构造函数只带一个数字参数的时候，该参数会被当做数组的预设长度，而非一个元素。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="built_in">Array</span>(<span class="number">3</span>);</div><div class="line"><span class="built_in">console</span>.log(a.length);  <span class="comment">// 3</span></div></pre></td></tr></table></figure></p>
+<p>创建包含<code>undefined</code>的数组：<code>apply(..)</code>是一个工具，适用于所有对象，它会以一种特殊的方式来调用传递给它的函数。第一个参数是<code>this</code>对象，第二个必须是一个数组（或类数组对象，array-like object），数组中的值被用作函数的参数。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="built_in">Array</span>.apply(<span class="literal">null</span>,&#123; <span class="attr">length</span>:<span class="number">3</span>&#125;);</div><div class="line"><span class="built_in">console</span>.log(a);  <span class="comment">// [ undefined, undefined, undefined ]</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+<h4 id="Object-、Function-、RegExp"><a href="#Object-、Function-、RegExp" class="headerlink" title="Object(..)、Function(..)、RegExp(..)"></a>Object(..)、Function(..)、RegExp(..)</h4><blockquote>
+<p>尽量不要使用<code>Object(..)、Function(..)、Regexp(..)</code>，在实际情况中没有必要使用<code>new Object()</code>来创建对象，因为这样无法像常量形式那样一次设定多个属性，而必须逐一设定。强烈建议使用常量形式定义正则表达式，语法简单、效率高。</p>
+<h4 id="Data-、Error"><a href="#Data-、Error" class="headerlink" title="Data(..)、Error(..)"></a>Data(..)、Error(..)</h4><p>创建日起对象必须使用<code>new Date()</code>。<code>Date(..)</code>可以带参数，用来指定日期时间，若不带参数则使用当前的如期和时间。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log((<span class="keyword">new</span> <span class="built_in">Date</span>()).getDate());  <span class="comment">// 28</span></div></pre></td></tr></table></figure></p>
+<p>构造函数<code>Error(..)</code>,带不带<code>new</code>关键字都可以。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">x</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (!x)</div><div class="line">  <span class="keyword">throw</span>  <span class="built_in">Error</span>(<span class="string">"x not found"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h4 id="Symbol"><a href="#Symbol" class="headerlink" title="Symbol(..)"></a>Symbol(..)</h4><blockquote>
+<p>基本数据类型，符号(<code>Symbol</code>)是具有唯一性的特殊值，用它来命名对象属性不容易导致重名，符号还可以自行定义，<code>Symbol</code>以静态属性形式出现，如<code>Symbol.create</code>等、不能用<code>new</code>关键字创建。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> mysym  = <span class="built_in">Symbol</span>(<span class="string">"abcd"</span>);</div><div class="line"><span class="built_in">console</span>.log(mysym);  <span class="comment">// Symbol(abcd)</span></div><div class="line"><span class="keyword">var</span> a = &#123;&#125;;</div><div class="line">a[mysym] = <span class="string">"apple"</span>;</div><div class="line"><span class="built_in">console</span>.log(a[mysym]);  <span class="comment">// apple</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+<h4 id="原生原型"><a href="#原生原型" class="headerlink" title="原生原型"></a>原生原型</h4><blockquote>
+<p>原生构造函数都有自己的<code>.prototype</code>对象，如<code>Array.prototype</code>等，这些对象包含其对应子类型所有的行为特征。比如将字符串封装成字符串对象，就可以访问<code>String.prototype</code>中定义的方法。</p>
+<p>根据文档约定，可将<code>.prototype.</code>替换为<code>#</code>，如<code>String.prototype.trim()</code>简写为<code>String#trim()</code>来去掉字符串的前后空格，<code>Array#concat(..)</code>合并数组，<code>Number#tofixed(..)</code>将数字转换为指定长度的整数字符串，其他对象同样如此。</p>
+<p><code>Function.prototype</code>是一个空函数，<code>Array.prototype</code>是一个空数组，<code>RegExp.prototype</code>是一个空正则表达式，对未赋值的变量来说，它们是很好的默认值，在ES6中可通过函数声明的内置语法来设置(取而代之)。</p>
+</blockquote>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/05/你不知道的JavaScript00——原型/" rel="next" title="你不知道的JavaScript00——原型">
+                <i class="fa fa-chevron-left"></i> 你不知道的JavaScript00——原型
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/10/05/你不知道的JavaScript01-原生函数/"
+           data-title="你不知道的JavaScript01--原生函数" data-url="http://yoursite.com/2016/10/05/你不知道的JavaScript01-原生函数/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="sstd521" />
+          <p class="site-author-name" itemprop="name">sstd521</p>
+          <p class="site-description motion-element" itemprop="description">learning notes</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/sstd521" target="_blank" title="github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/sstd521" target="_blank" title="twitter">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/sstd521" target="_blank" title="weibo">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/ssts521" target="_blank" title="zhihu">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  zhihu
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://iwenk.com/" title="爱问客" target="_blank">爱问客</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript学习笔记01"><span class="nav-number">1.</span> <span class="nav-text">JavaScript学习笔记01</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#原生函数"><span class="nav-number">1.1.</span> <span class="nav-text">原生函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#内部属性"><span class="nav-number">1.1.1.</span> <span class="nav-text">内部属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#封装对象包装"><span class="nav-number">1.1.2.</span> <span class="nav-text">封装对象包装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#拆封"><span class="nav-number">1.1.3.</span> <span class="nav-text">拆封</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#原生函数作为构造函数"><span class="nav-number">1.1.4.</span> <span class="nav-text">原生函数作为构造函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Object-、Function-、RegExp"><span class="nav-number">1.1.5.</span> <span class="nav-text">Object(..)、Function(..)、RegExp(..)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Data-、Error"><span class="nav-number">1.1.6.</span> <span class="nav-text">Data(..)、Error(..)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Symbol"><span class="nav-number">1.1.7.</span> <span class="nav-text">Symbol(..)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#原生原型"><span class="nav-number">1.1.8.</span> <span class="nav-text">原生原型</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">sstd521</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+本站总访问量 <span id="busuanzi_value_site_pv"></span> &nbsp&nbsp&nbsp
+您是第<span id="busuanzi_value_site_uv"></span>个来到的小伙伴
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"sstd521"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
