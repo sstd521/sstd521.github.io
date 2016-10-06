@@ -86,17 +86,18 @@
 
 
 
-<meta name="description" content="在hexo-new之后立马打开Markdown文稿，好处就不啰嗦了，直接看操作吧。">
+<meta name="description" content="在hexo-new之后立马打开Markdown文稿，好处就不啰嗦了，直接操作吧。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在hexo-new之后立马打开Markdown文稿">
 <meta property="og:url" content="http://yoursite.com/2016/10/05/在hexo-new之后立马打开Markdown文稿/index.html">
 <meta property="og:site_name" content="WeekNote">
-<meta property="og:description" content="在hexo-new之后立马打开Markdown文稿，好处就不啰嗦了，直接看操作吧。">
+<meta property="og:description" content="在hexo-new之后立马打开Markdown文稿，好处就不啰嗦了，直接操作吧。">
 <meta property="og:image" content="http://yoursite.com/images/js.png">
-<meta property="og:updated_time" content="2016-10-05T05:55:37.522Z">
+<meta property="og:image" content="http://yoursite.com/images/Typora.png">
+<meta property="og:updated_time" content="2016-10-05T06:49:49.543Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在hexo-new之后立马打开Markdown文稿">
-<meta name="twitter:description" content="在hexo-new之后立马打开Markdown文稿，好处就不啰嗦了，直接看操作吧。">
+<meta name="twitter:description" content="在hexo-new之后立马打开Markdown文稿，好处就不啰嗦了，直接操作吧。">
 <meta name="twitter:image" content="http://yoursite.com/images/js.png">
 
 
@@ -324,7 +325,8 @@
       
         <h2 id="在hexo-new之后立即用马克飞象打开Markdown文稿"><a href="#在hexo-new之后立即用马克飞象打开Markdown文稿" class="headerlink" title="在hexo new之后立即用马克飞象打开Markdown文稿"></a>在hexo new之后立即用马克飞象打开Markdown文稿</h2><h2 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h2><p>　　　在根目录新建一个文件夹scripts(因为本来没有，只能新建)，然后新建txt文本文件，重命名为 “open_editor_after_hexo_new_immediately.js”，这个在Windows下干活的人都知道吧，名字可以随便，不过我觉得这个名字比较好认，你以后可能要改也方便。<br><img src="/images/js.png" alt="Alt text"></p>
 <h2 id="第二步"><a href="#第二步" class="headerlink" title="第二步:"></a>第二步:</h2><p>　　　随便用一个文本编辑器打开，比如用Sublime Text。读者可以选择自己偏好的markdown编辑器(马克飞象不能用，因为无法保存)，我个人修改内容如下:<br>　　　<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> exec = <span class="built_in">require</span>(<span class="string">'child_process'</span>).exec;</div><div class="line"><span class="comment">// Hexo 2.x 传进来的参数即是路径</span></div><div class="line"><span class="comment">/*</span></div><div class="line">hexo.on('new', function(path)&#123;</div><div class="line">    exec('"S:\\Hexo\\MarkdownPad2\\MarkdownPad2.exe" ' + "\"" + [path] + "\"");</div><div class="line">&#125;);</div><div class="line">*/</div><div class="line"><span class="comment">// Hexo 3 传进来的参数是一个&#123;&#125;定义的多属性对象，</span></div><div class="line"><span class="comment">// 参见"hexo根目录/node_modules/hexo/lib/plugins/console/new.js"</span></div><div class="line">hexo.on(<span class="string">'new'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</div><div class="line">    exec(<span class="string">'"D:/Program Files/Typora/Typora.exe" '</span> + <span class="string">"\""</span> + [data.path] + <span class="string">"\""</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-<p>进入hexo根目录，git bash here 输入hexo new title ,会自动打开markdown编辑软件(我用的是Typora,免费且功能很强大，十分推荐)，然后就可以愉快的编辑le,编辑后，hexo server 本地预览后就可以生成更新部署啦。</p>
+<p>进入hexo根目录，git bash here 输入hexo new title ,会自动打开markdown编辑软件(我用的是免费的Typora,功能很强大，十分推荐)，然后就可以愉快的编辑le,编辑后，hexo server 本地预览后就可以生成更新部署啦。</p>
+<p><img src="/images/Typora.png" alt="Typora"></p>
 <p>参考：<a href="http://durant35.github.io/2016/02/02/hexo_%E5%9C%A8hexo%20new%E4%B9%8B%E5%90%8E%E7%AB%8B%E5%8D%B3%E6%89%93%E5%BC%80%E6%96%B0%E5%BB%BA%E7%9A%84Markdown%E6%96%87%E7%A8%BF/" target="_blank" rel="external">在hexo new之后立即打开Markdown文稿</a></p>
 
       
@@ -366,6 +368,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/10/06/different-image-host-performance/" rel="prev" title="different image host performance">
+                different image host performance <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -445,7 +451,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -454,7 +460,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

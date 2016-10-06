@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-10-05T05:55:37.522Z</updated>
+  <updated>2016-10-06T03:36:50.484Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,21 +16,66 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>different image host performance</title>
+    <link href="http://yoursite.com/2016/10/06/different-image-host-performance/"/>
+    <id>http://yoursite.com/2016/10/06/different-image-host-performance/</id>
+    <published>2016-10-06T01:34:09.000Z</published>
+    <updated>2016-10-06T03:36:50.484Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Image-host-compare"><a href="#Image-host-compare" class="headerlink" title="Image host compare:"></a>Image host compare:</h1><h2 id="七牛"><a href="#七牛" class="headerlink" title="七牛"></a>七牛</h2><p><img src="http://oekg9a0ty.bkt.clouddn.com/1.jpg" alt=""></p>
+<p><img src="http://oekg9a0ty.bkt.clouddn.com/2.jpg" alt=""></p>
+<p><img src="http://oekg9a0ty.bkt.clouddn.com/3.png" alt=""></p>
+<h2 id="Imgur"><a href="#Imgur" class="headerlink" title="Imgur"></a>Imgur</h2><p><img src="http://imgur.com/DXEE0Dq.jpg" alt=""></p>
+<p><img src="http://imgur.com/M1WVg9h.jpg" alt=""></p>
+<p><img src="http://imgur.com/v74BVIV.jpg" alt=""></p>
+<h2 id="PhotoBucket"><a href="#PhotoBucket" class="headerlink" title="PhotoBucket"></a>PhotoBucket</h2><p><img src="http://i1076.photobucket.com/albums/w448/sstd521/Mobile%20Uploads/ea36af03tw1ejhruh9ttbj20go0bnjs2_zps45m2bvxg.jpg" alt=""></p>
+<p><img src="http://i1076.photobucket.com/albums/w448/sstd521/Mobile%20Uploads/1516291831_zpsy66hnces.jpg" alt=""></p>
+<p><img src="http://i1076.photobucket.com/albums/w448/sstd521/Mobile%20Uploads/mmexport1470608951897_zpsc8mm8utm.png" alt=""></p>
+<h2 id="Flicker"><a href="#Flicker" class="headerlink" title="Flicker"></a>Flicker</h2><p><img src="https://c5.staticflickr.com/6/5076/30028702572_3ddc05203e_z.jpg" alt=""></p>
+<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/147777450@N03/29514303483/in/dateposted-public/" title="2" target="_blank" rel="external"><img src="https://c4.staticflickr.com/9/8537/29514303483_f10f056342_z.jpg" width="640" height="480" alt="2"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p><img src="https://c4.staticflickr.com/9/8537/29514303483_f10f056342_z.jpg" alt=""></p>
+<p><img src="https://c6.staticflickr.com/6/5731/30058683541_e426c6e70c_z.jpg" alt=""></p>
+<h2 id="Tinypic"><a href="#Tinypic" class="headerlink" title="Tinypic"></a>Tinypic</h2><p><img src="http://i67.tinypic.com/zjypzk.jpg" alt=""></p>
+<p><img src="http://i66.tinypic.com/294s2oo.jpg" alt=""></p>
+<p><img src="http://i68.tinypic.com/30280mo.jpg" alt=""></p>
+<h2 id="ImageSafe"><a href="#ImageSafe" class="headerlink" title="ImageSafe"></a>ImageSafe</h2><p><img src="http://i.imgsafe.org/5bdd2c5ec4.jpg" alt=""></p>
+<p><img src="http://i.imgsafe.org/5bdd6c7cfb.jpg" alt=""></p>
+<p><img src="http://i.imgsafe.org/5bde37f8bd.png" alt=""></p>
+<h2 id="ImageStack"><a href="#ImageStack" class="headerlink" title="ImageStack"></a>ImageStack</h2><p><img src="http://imageshack.com/a/img921/9382/B4RM1R.jpg" alt=""></p>
+<p><img src="http://imageshack.com/a/img923/5526/5THOE1.jpg" alt=""></p>
+<p><img src="http://imageshack.com/a/img921/636/qTEgFM.png" alt=""></p>
+]]></content>
+    
+    <summary type="html">
+    
+      Image host compare
+    
+    </summary>
+    
+      <category term="工具" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="Image Host" scheme="http://yoursite.com/tags/Image-Host/"/>
+    
+  </entry>
+  
+  <entry>
     <title>在hexo-new之后立马打开Markdown文稿</title>
     <link href="http://yoursite.com/2016/10/05/%E5%9C%A8hexo-new%E4%B9%8B%E5%90%8E%E7%AB%8B%E9%A9%AC%E6%89%93%E5%BC%80Markdown%E6%96%87%E7%A8%BF/"/>
     <id>http://yoursite.com/2016/10/05/在hexo-new之后立马打开Markdown文稿/</id>
     <published>2016-10-05T05:36:51.000Z</published>
-    <updated>2016-10-05T05:55:37.522Z</updated>
+    <updated>2016-10-05T06:49:49.543Z</updated>
     
     <content type="html"><![CDATA[<h2 id="在hexo-new之后立即用马克飞象打开Markdown文稿"><a href="#在hexo-new之后立即用马克飞象打开Markdown文稿" class="headerlink" title="在hexo new之后立即用马克飞象打开Markdown文稿"></a>在hexo new之后立即用马克飞象打开Markdown文稿</h2><h2 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h2><p>　　　在根目录新建一个文件夹scripts(因为本来没有，只能新建)，然后新建txt文本文件，重命名为 “open_editor_after_hexo_new_immediately.js”，这个在Windows下干活的人都知道吧，名字可以随便，不过我觉得这个名字比较好认，你以后可能要改也方便。<br><img src="/images/js.png" alt="Alt text"></p>
 <h2 id="第二步"><a href="#第二步" class="headerlink" title="第二步:"></a>第二步:</h2><p>　　　随便用一个文本编辑器打开，比如用Sublime Text。读者可以选择自己偏好的markdown编辑器(马克飞象不能用，因为无法保存)，我个人修改内容如下:<br>　　　<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> exec = <span class="built_in">require</span>(<span class="string">'child_process'</span>).exec;</div><div class="line"><span class="comment">// Hexo 2.x 传进来的参数即是路径</span></div><div class="line"><span class="comment">/*</span></div><div class="line">hexo.on('new', function(path)&#123;</div><div class="line">    exec('"S:\\Hexo\\MarkdownPad2\\MarkdownPad2.exe" ' + "\"" + [path] + "\"");</div><div class="line">&#125;);</div><div class="line">*/</div><div class="line"><span class="comment">// Hexo 3 传进来的参数是一个&#123;&#125;定义的多属性对象，</span></div><div class="line"><span class="comment">// 参见"hexo根目录/node_modules/hexo/lib/plugins/console/new.js"</span></div><div class="line">hexo.on(<span class="string">'new'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</div><div class="line">    exec(<span class="string">'"D:/Program Files/Typora/Typora.exe" '</span> + <span class="string">"\""</span> + [data.path] + <span class="string">"\""</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-<p>进入hexo根目录，git bash here 输入hexo new title ,会自动打开markdown编辑软件(我用的是Typora,免费且功能很强大，十分推荐)，然后就可以愉快的编辑le,编辑后，hexo server 本地预览后就可以生成更新部署啦。</p>
+<p>进入hexo根目录，git bash here 输入hexo new title ,会自动打开markdown编辑软件(我用的是免费的Typora,功能很强大，十分推荐)，然后就可以愉快的编辑le,编辑后，hexo server 本地预览后就可以生成更新部署啦。</p>
+<p><img src="/images/Typora.png" alt="Typora"></p>
 <p>参考：<a href="http://durant35.github.io/2016/02/02/hexo_%E5%9C%A8hexo%20new%E4%B9%8B%E5%90%8E%E7%AB%8B%E5%8D%B3%E6%89%93%E5%BC%80%E6%96%B0%E5%BB%BA%E7%9A%84Markdown%E6%96%87%E7%A8%BF/" target="_blank" rel="external">在hexo new之后立即打开Markdown文稿</a></p>
 ]]></content>
     
     <summary type="html">
     
-      在hexo-new之后立马打开Markdown文稿，好处就不啰嗦了，直接看操作吧。
+      在hexo-new之后立马打开Markdown文稿，好处就不啰嗦了，直接操作吧。
     
     </summary>
     
@@ -124,20 +169,6 @@
     
     
       <category term="skill" scheme="http://yoursite.com/tags/skill/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>格式才行。那遇到没装软件或者只有手机在手的时候怎么办？有没有更便捷的方法？</title>
-    <link href="http://yoursite.com/2016/10/05/%E6%A0%BC%E5%BC%8F%E6%89%8D%E8%A1%8C%E3%80%82%E9%82%A3%E9%81%87%E5%88%B0%E6%B2%A1%E8%A3%85%E8%BD%AF%E4%BB%B6%E6%88%96%E8%80%85%E5%8F%AA%E6%9C%89%E6%89%8B%E6%9C%BA%E5%9C%A8%E6%89%8B%E7%9A%84%E6%97%B6%E5%80%99%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F%E6%9C%89%E6%B2%A1%E6%9C%89%E6%9B%B4%E4%BE%BF%E6%8D%B7%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%9F/"/>
-    <id>http://yoursite.com/2016/10/05/格式才行。那遇到没装软件或者只有手机在手的时候怎么办？有没有更便捷的方法？/</id>
-    <published>2016-10-05T04:57:03.000Z</published>
-    <updated>2016-10-05T04:57:03.974Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
     
   </entry>
   

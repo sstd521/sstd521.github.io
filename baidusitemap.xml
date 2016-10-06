@@ -4,8 +4,28 @@
 
     
   <url>
+    <loc>http://yoursite.com/2016/10/06/different-image-host-performance/</loc>
+    <lastmod>2016-10-06T03:36:50.484Z</lastmod>
+    <data>
+        <display>
+        <title>different image host performance</title>
+        <pubTime>2016-10-06T01:34:09.000Z</pubTime>
+        
+        <tag>Image Host</tag>
+         
+         
+           
+             
+              <breadCrumb title="工具" url="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2016/10/05/%E5%9C%A8hexo-new%E4%B9%8B%E5%90%8E%E7%AB%8B%E9%A9%AC%E6%89%93%E5%BC%80Markdown%E6%96%87%E7%A8%BF/</loc>
-    <lastmod>2016-10-05T05:55:37.522Z</lastmod>
+    <lastmod>2016-10-05T06:49:49.543Z</lastmod>
     <data>
         <display>
         <title>在hexo-new之后立马打开Markdown文稿</title>
@@ -60,21 +80,6 @@
              
               <breadCrumb title="游戏" url="http://yoursite.com/categories/%E6%B8%B8%E6%88%8F/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2016/10/05/%E6%A0%BC%E5%BC%8F%E6%89%8D%E8%A1%8C%E3%80%82%E9%82%A3%E9%81%87%E5%88%B0%E6%B2%A1%E8%A3%85%E8%BD%AF%E4%BB%B6%E6%88%96%E8%80%85%E5%8F%AA%E6%9C%89%E6%89%8B%E6%9C%BA%E5%9C%A8%E6%89%8B%E7%9A%84%E6%97%B6%E5%80%99%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F%E6%9C%89%E6%B2%A1%E6%9C%89%E6%9B%B4%E4%BE%BF%E6%8D%B7%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%9F/</loc>
-    <lastmod>2016-10-05T04:57:03.974Z</lastmod>
-    <data>
-        <display>
-        <title>格式才行。那遇到没装软件或者只有手机在手的时候怎么办？有没有更便捷的方法？</title>
-        <pubTime>2016-10-05T04:57:03.000Z</pubTime>
-        
-         
-           
         </display>
     </data>
     </url>
