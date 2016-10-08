@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-10-08T10:27:01.643Z</updated>
+  <updated>2016-10-06T03:36:50.484Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,26 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title></title>
-    <link href="http://yoursite.com/2016/10/08/google8bb5abc837085154/"/>
-    <id>http://yoursite.com/2016/10/08/google8bb5abc837085154/</id>
-    <published>2016-10-08T10:26:13.635Z</published>
-    <updated>2016-10-08T10:27:01.643Z</updated>
-    
-    <content type="html"><![CDATA[<p>google-site-verification: google8bb5abc837085154.html</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;google-site-verification: google8bb5abc837085154.html&lt;/p&gt;
-
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>different image host performance</title>
