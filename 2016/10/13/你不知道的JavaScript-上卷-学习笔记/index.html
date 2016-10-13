@@ -1,28 +1,326 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title>WeekNote</title>
-  <subtitle>publish at least one note a week</subtitle>
-  <link href="/atom.xml" rel="self"/>
+<!doctype html>
+
+
+
   
-  <link href="http://yoursite.com/"/>
-  <updated>2016-10-13T06:39:33.919Z</updated>
-  <id>http://yoursite.com/</id>
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
   
-  <author>
-    <name>sstd521</name>
-    <email>sstd521@gmail.com</email>
-  </author>
   
-  <generator uri="http://hexo.io/">Hexo</generator>
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
   
-  <entry>
-    <title>你不知道的JavaScript(上卷)学习笔记</title>
-    <link href="http://yoursite.com/2016/10/13/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84JavaScript-%E4%B8%8A%E5%8D%B7-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>http://yoursite.com/2016/10/13/你不知道的JavaScript-上卷-学习笔记/</id>
-    <published>2016-10-13T06:35:54.000Z</published>
-    <updated>2016-10-13T06:39:33.919Z</updated>
+  
+  
+  
+
+  
     
-    <content type="html"><![CDATA[<h3 id="函数作用域"><a href="#函数作用域" class="headerlink" title="函数作用域"></a>函数作用域</h3><h4 id="包装函数"><a href="#包装函数" class="headerlink" title="包装函数"></a>包装函数</h4><p> 包装函数的声明以 <code>(function...</code> 而不仅是以 <code>function...</code> 开始。函数会被当作函数表达式而不是一个标准的函数声明来处理。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">2</span>;</div><div class="line">(<span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span></div><div class="line">        &#123;</div><div class="line">            <span class="keyword">var</span> a = <span class="number">3</span>;</div><div class="line">            <span class="built_in">console</span>.log(a);  <span class="comment">// 3</span></div><div class="line">        &#125;)();</div><div class="line"><span class="built_in">console</span>.log(a);  <span class="comment">// 2</span></div></pre></td></tr></table></figure></p>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="JavaScript," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="WeekNote" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="你不知道的JavaScript(上卷)学习笔记精华">
+<meta property="og:type" content="article">
+<meta property="og:title" content="你不知道的JavaScript(上卷)学习笔记">
+<meta property="og:url" content="http://yoursite.com/2016/10/13/你不知道的JavaScript-上卷-学习笔记/index.html">
+<meta property="og:site_name" content="WeekNote">
+<meta property="og:description" content="你不知道的JavaScript(上卷)学习笔记精华">
+<meta property="og:updated_time" content="2016-10-13T06:39:33.919Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="你不知道的JavaScript(上卷)学习笔记">
+<meta name="twitter:description" content="你不知道的JavaScript(上卷)学习笔记精华">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/10/13/你不知道的JavaScript-上卷-学习笔记/"/>
+
+  <title> 你不知道的JavaScript(上卷)学习笔记 | WeekNote </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">WeekNote</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">publish at least one note a week</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                你不知道的JavaScript(上卷)学习笔记
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-13T14:35:54+08:00" content="2016-10-13">
+              2016-10-13
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/13/你不知道的JavaScript-上卷-学习笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/13/你不知道的JavaScript-上卷-学习笔记/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+          
+          <span>&nbsp; | &nbsp;
+          <span id="busuanzi_value_page_pv" ></span>次阅读
+          </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="函数作用域"><a href="#函数作用域" class="headerlink" title="函数作用域"></a>函数作用域</h3><h4 id="包装函数"><a href="#包装函数" class="headerlink" title="包装函数"></a>包装函数</h4><p> 包装函数的声明以 <code>(function...</code> 而不仅是以 <code>function...</code> 开始。函数会被当作函数表达式而不是一个标准的函数声明来处理。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">2</span>;</div><div class="line">(<span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span></div><div class="line">        &#123;</div><div class="line">            <span class="keyword">var</span> a = <span class="number">3</span>;</div><div class="line">            <span class="built_in">console</span>.log(a);  <span class="comment">// 3</span></div><div class="line">        &#125;)();</div><div class="line"><span class="built_in">console</span>.log(a);  <span class="comment">// 2</span></div></pre></td></tr></table></figure></p>
 <blockquote>
 <p>区分函数声明和表达式最简单的方法是看 <code>function</code> 关键字出现在声明中的位置（不仅仅是一行代码，而是整个声明中的位置）。如果 <code>function</code> 是声明中的第一个词，那么就是一个函数声明，否则就是一个函数表达式。</p>
 <p> <code>(function foo(){ .. })</code> 作为函数表达式意味着 <code>foo</code> 只能在 <code>..</code> 所代表的位置中被访问，外部作用域则不行。 <code>foo</code> 变量名被隐藏在自身中意味着不会非必要地污染外部作用域。</p>
@@ -196,353 +494,373 @@
 <blockquote>
 <p>Object.create(null) 会 创 建 一 个 拥 有 空（ 或 者 说 null ） [[Prototype]]链接的对象，这个对象无法进行委托。</p>
 </blockquote>
-]]></content>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/06/different-image-host-performance/" rel="next" title="different image host performance">
+                <i class="fa fa-chevron-left"></i> different image host performance
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
     
-    <summary type="html">
+      <div class="ds-thread" data-thread-key="2016/10/13/你不知道的JavaScript-上卷-学习笔记/"
+           data-title="你不知道的JavaScript(上卷)学习笔记" data-url="http://yoursite.com/2016/10/13/你不知道的JavaScript-上卷-学习笔记/">
+      </div>
     
-      你不知道的JavaScript(上卷)学习笔记精华
-    
-    </summary>
-    
-      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
-    
-  </entry>
+  </div>
+
+
+        </div>
+        
+          
   
-  <entry>
-    <title>different image host performance</title>
-    <link href="http://yoursite.com/2016/10/06/different-image-host-performance/"/>
-    <id>http://yoursite.com/2016/10/06/different-image-host-performance/</id>
-    <published>2016-10-06T01:34:09.000Z</published>
-    <updated>2016-10-06T03:36:50.484Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Image-host-compare"><a href="#Image-host-compare" class="headerlink" title="Image host compare:"></a>Image host compare:</h1><h2 id="七牛"><a href="#七牛" class="headerlink" title="七牛"></a>七牛</h2><p><img src="http://oekg9a0ty.bkt.clouddn.com/1.jpg" alt=""></p>
-<p><img src="http://oekg9a0ty.bkt.clouddn.com/2.jpg" alt=""></p>
-<p><img src="http://oekg9a0ty.bkt.clouddn.com/3.png" alt=""></p>
-<h2 id="Imgur"><a href="#Imgur" class="headerlink" title="Imgur"></a>Imgur</h2><p><img src="http://imgur.com/DXEE0Dq.jpg" alt=""></p>
-<p><img src="http://imgur.com/M1WVg9h.jpg" alt=""></p>
-<p><img src="http://imgur.com/v74BVIV.jpg" alt=""></p>
-<h2 id="PhotoBucket"><a href="#PhotoBucket" class="headerlink" title="PhotoBucket"></a>PhotoBucket</h2><p><img src="http://i1076.photobucket.com/albums/w448/sstd521/Mobile%20Uploads/ea36af03tw1ejhruh9ttbj20go0bnjs2_zps45m2bvxg.jpg" alt=""></p>
-<p><img src="http://i1076.photobucket.com/albums/w448/sstd521/Mobile%20Uploads/1516291831_zpsy66hnces.jpg" alt=""></p>
-<p><img src="http://i1076.photobucket.com/albums/w448/sstd521/Mobile%20Uploads/mmexport1470608951897_zpsc8mm8utm.png" alt=""></p>
-<h2 id="Flicker"><a href="#Flicker" class="headerlink" title="Flicker"></a>Flicker</h2><p><img src="https://c5.staticflickr.com/6/5076/30028702572_3ddc05203e_z.jpg" alt=""></p>
-<p><a data-flickr-embed="true" href="https://www.flickr.com/photos/147777450@N03/29514303483/in/dateposted-public/" title="2" target="_blank" rel="external"><img src="https://c4.staticflickr.com/9/8537/29514303483_f10f056342_z.jpg" width="640" height="480" alt="2"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-<p><img src="https://c4.staticflickr.com/9/8537/29514303483_f10f056342_z.jpg" alt=""></p>
-<p><img src="https://c6.staticflickr.com/6/5731/30058683541_e426c6e70c_z.jpg" alt=""></p>
-<h2 id="Tinypic"><a href="#Tinypic" class="headerlink" title="Tinypic"></a>Tinypic</h2><p><img src="http://i67.tinypic.com/zjypzk.jpg" alt=""></p>
-<p><img src="http://i66.tinypic.com/294s2oo.jpg" alt=""></p>
-<p><img src="http://i68.tinypic.com/30280mo.jpg" alt=""></p>
-<h2 id="ImageSafe"><a href="#ImageSafe" class="headerlink" title="ImageSafe"></a>ImageSafe</h2><p><img src="http://i.imgsafe.org/5bdd2c5ec4.jpg" alt=""></p>
-<p><img src="http://i.imgsafe.org/5bdd6c7cfb.jpg" alt=""></p>
-<p><img src="http://i.imgsafe.org/5bde37f8bd.png" alt=""></p>
-<h2 id="ImageStack"><a href="#ImageStack" class="headerlink" title="ImageStack"></a>ImageStack</h2><p><img src="http://imageshack.com/a/img921/9382/B4RM1R.jpg" alt=""></p>
-<p><img src="http://imageshack.com/a/img923/5526/5THOE1.jpg" alt=""></p>
-<p><img src="http://imageshack.com/a/img921/636/qTEgFM.png" alt=""></p>
-]]></content>
-    
-    <summary type="html">
-    
-      Image host compare
-    
-    </summary>
-    
-      <category term="工具" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="Image Host" scheme="http://yoursite.com/tags/Image-Host/"/>
-    
-  </entry>
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="sstd521" />
+          <p class="site-author-name" itemprop="name">sstd521</p>
+          <p class="site-description motion-element" itemprop="description">learning notes</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/sstd521" target="_blank" title="github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/sstd521" target="_blank" title="twitter">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/sstd521" target="_blank" title="weibo">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/ssts521" target="_blank" title="zhihu">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  zhihu
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://iwenk.com/" title="爱问客" target="_blank">爱问客</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#函数作用域"><span class="nav-number">1.</span> <span class="nav-text">函数作用域</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#包装函数"><span class="nav-number">1.1.</span> <span class="nav-text">包装函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#立即执行函数表达式-IIFE"><span class="nav-number">1.2.</span> <span class="nav-text">立即执行函数表达式(IIFE)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#块作用域"><span class="nav-number">1.3.</span> <span class="nav-text">块作用域</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#let"><span class="nav-number">1.4.</span> <span class="nav-text">let</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提升"><span class="nav-number">2.</span> <span class="nav-text">提升</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#声明提升"><span class="nav-number">2.1.</span> <span class="nav-text">声明提升</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数优先"><span class="nav-number">2.2.</span> <span class="nav-text">函数优先</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#作用域闭包"><span class="nav-number">3.</span> <span class="nav-text">作用域闭包</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#this-词法"><span class="nav-number">3.1.</span> <span class="nav-text">this 词法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#this-全面解析"><span class="nav-number">3.2.</span> <span class="nav-text">this 全面解析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#默认绑定"><span class="nav-number">3.3.</span> <span class="nav-text">默认绑定</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#隐式绑定"><span class="nav-number">3.4.</span> <span class="nav-text">隐式绑定</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#显式绑定"><span class="nav-number">3.5.</span> <span class="nav-text">显式绑定</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#硬绑定"><span class="nav-number">3.5.1.</span> <span class="nav-text">硬绑定</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#new-绑定"><span class="nav-number">3.6.</span> <span class="nav-text">new 绑定</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#四条规则判断-this-的绑定对象："><span class="nav-number">3.7.</span> <span class="nav-text">四条规则判断 this 的绑定对象：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对象"><span class="nav-number">4.</span> <span class="nav-text">对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#语法"><span class="nav-number">4.1.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类型"><span class="nav-number">4.2.</span> <span class="nav-text">类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#内容"><span class="nav-number">4.3.</span> <span class="nav-text">内容</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#可计算属性名"><span class="nav-number">4.3.1.</span> <span class="nav-text">可计算属性名</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#复制对象"><span class="nav-number">4.4.</span> <span class="nav-text">复制对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#属性描述符"><span class="nav-number">4.5.</span> <span class="nav-text">属性描述符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#不变性"><span class="nav-number">4.6.</span> <span class="nav-text">不变性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#getter和setter"><span class="nav-number">4.7.</span> <span class="nav-text">getter和setter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#存在性"><span class="nav-number">4.8.</span> <span class="nav-text">存在性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遍历"><span class="nav-number">4.9.</span> <span class="nav-text">遍历</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原型"><span class="nav-number">5.</span> <span class="nav-text">原型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#属性设置与屏蔽"><span class="nav-number">5.1.</span> <span class="nav-text">属性设置与屏蔽</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#“类”函数"><span class="nav-number">5.2.</span> <span class="nav-text">“类”函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#继承"><span class="nav-number">5.3.</span> <span class="nav-text">继承</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#检查“类”关系"><span class="nav-number">5.4.</span> <span class="nav-text">检查“类”关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对象关联"><span class="nav-number">5.5.</span> <span class="nav-text">对象关联</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
   
-  <entry>
-    <title>在hexo-new之后立马打开Markdown文稿</title>
-    <link href="http://yoursite.com/2016/10/05/%E5%9C%A8hexo-new%E4%B9%8B%E5%90%8E%E7%AB%8B%E9%A9%AC%E6%89%93%E5%BC%80Markdown%E6%96%87%E7%A8%BF/"/>
-    <id>http://yoursite.com/2016/10/05/在hexo-new之后立马打开Markdown文稿/</id>
-    <published>2016-10-05T05:36:51.000Z</published>
-    <updated>2016-10-05T06:49:49.543Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="在hexo-new之后立即用马克飞象打开Markdown文稿"><a href="#在hexo-new之后立即用马克飞象打开Markdown文稿" class="headerlink" title="在hexo new之后立即用马克飞象打开Markdown文稿"></a>在hexo new之后立即用马克飞象打开Markdown文稿</h2><h2 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h2><p>　　　在根目录新建一个文件夹scripts(因为本来没有，只能新建)，然后新建txt文本文件，重命名为 “open_editor_after_hexo_new_immediately.js”，这个在Windows下干活的人都知道吧，名字可以随便，不过我觉得这个名字比较好认，你以后可能要改也方便。<br><img src="/images/js.png" alt="Alt text"></p>
-<h2 id="第二步"><a href="#第二步" class="headerlink" title="第二步:"></a>第二步:</h2><p>　　　随便用一个文本编辑器打开，比如用Sublime Text。读者可以选择自己偏好的markdown编辑器(马克飞象不能用，因为无法保存)，我个人修改内容如下:<br>　　　<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> exec = <span class="built_in">require</span>(<span class="string">'child_process'</span>).exec;</div><div class="line"><span class="comment">// Hexo 2.x 传进来的参数即是路径</span></div><div class="line"><span class="comment">/*</span></div><div class="line">hexo.on('new', function(path)&#123;</div><div class="line">    exec('"S:\\Hexo\\MarkdownPad2\\MarkdownPad2.exe" ' + "\"" + [path] + "\"");</div><div class="line">&#125;);</div><div class="line">*/</div><div class="line"><span class="comment">// Hexo 3 传进来的参数是一个&#123;&#125;定义的多属性对象，</span></div><div class="line"><span class="comment">// 参见"hexo根目录/node_modules/hexo/lib/plugins/console/new.js"</span></div><div class="line">hexo.on(<span class="string">'new'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</div><div class="line">    exec(<span class="string">'"D:/Program Files/Typora/Typora.exe" '</span> + <span class="string">"\""</span> + [data.path] + <span class="string">"\""</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-<p>进入hexo根目录，git bash here 输入hexo new title ,会自动打开markdown编辑软件(我用的是免费的Typora,功能很强大，十分推荐)，然后就可以愉快的编辑le,编辑后，hexo server 本地预览后就可以生成更新部署啦。</p>
-<p><img src="/images/Typora.png" alt="Typora"></p>
-<p>参考：<a href="http://durant35.github.io/2016/02/02/hexo_%E5%9C%A8hexo%20new%E4%B9%8B%E5%90%8E%E7%AB%8B%E5%8D%B3%E6%89%93%E5%BC%80%E6%96%B0%E5%BB%BA%E7%9A%84Markdown%E6%96%87%E7%A8%BF/" target="_blank" rel="external">在hexo new之后立即打开Markdown文稿</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      在hexo-new之后立马打开Markdown文稿，好处就不啰嗦了，直接操作吧。
-    
-    </summary>
-    
-      <category term="博客" scheme="http://yoursite.com/categories/%E5%8D%9A%E5%AE%A2/"/>
-    
-    
-      <category term="MarkDown" scheme="http://yoursite.com/tags/MarkDown/"/>
-    
-      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
-    
-  </entry>
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">sstd521</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+本站总访问量 <span id="busuanzi_value_site_pv"></span> &nbsp&nbsp&nbsp
+您是第<span id="busuanzi_value_site_uv"></span>个来到的小伙伴
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
   
-  <entry>
-    <title>Cocos学习笔记00</title>
-    <link href="http://yoursite.com/2016/10/05/Cocos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B000/"/>
-    <id>http://yoursite.com/2016/10/05/Cocos学习笔记00/</id>
-    <published>2016-10-05T05:05:13.000Z</published>
-    <updated>2016-10-05T05:25:03.125Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="cocos-creator"><a href="#cocos-creator" class="headerlink" title="cocos creator"></a>cocos creator</h1><p>@(cocos学习笔记)</p>
-<blockquote>
-<p>Cocos Creator 是一款以内容创作为导向的新型游戏开发工具，它完整集成了组件化的 Cocos2d-x WEB 版本，可发布游戏到 Web，iOS，Android，Mac，Windows等平台，更支持直接发布 Cocos Play 平台，把握手机页游渠道的快速发展带来的新机遇。<br><img src="/images/structure.png" alt="Alt text"></p>
-<p>Cocos2d-x 中，开发方式是以代码来驱动,在 Cocos Creator 框架中，所有场景都会被序列化为纯数据，在运行时使用这些纯数据来重新构建场景，界面，动画甚至组件等元素。 Cocos Creator 提供的是更加彻底的数据驱动方式，在编辑器中编辑的所有信息都会被序列化到数据文件中，在运行时，引擎会通过反序列化的方式将数据直接转化为对象。引擎中类的属性是可直接被序列化和反序列化的，不需要通过任何映射关系来转化。</p>
-<h2 id="序列化和反序列化"><a href="#序列化和反序列化" class="headerlink" title="序列化和反序列化"></a>序列化和反序列化</h2><p>序列化和反序列化支持 Cocos Creator 中类的绝大多数公有属性，这些属性通过属性检查器面板暴露给开发者。开发者可以在编辑器中随意修改并保存，保存的过程就是将资源和场景数据序列化到资源数据库（Asset Database）中。反之，在加载场景的过程中，反序列化机制会根据场景数据实例化相应的对象，并还原编辑器中设置的所有属性。<br>数据驱动的强大之处在于，用户自己编辑的组件也可以进行属性声明。这些属性可以在编辑器中被编辑，也会被保存到场景数据中，最后在运行时被反序列化到游戏场景中。资源数据库在编辑器中以资源管理器的形式呈现。</p>
-<p>Cocos Creator 的工作流是内容创作为导向的。数据驱动使得场景可以被自由得进行编辑，不仅可以可视化得搭建整个场景，还可以对游戏逻辑进行编辑（编辑组件暴露出的属性）。这使得一切的入口点变成了编辑器，而不是代码。<br><img src="/images/edit_e.png" alt="Alt text"></p>
-</blockquote>
-<h2 id="逻辑树和渲染树"><a href="#逻辑树和渲染树" class="headerlink" title="逻辑树和渲染树"></a>逻辑树和渲染树</h2><blockquote>
-<p>开发者在编辑器中搭建的节点树和挂载的组件共同组成了逻辑树，其中节点构成实体单位，组件负责逻辑。逻辑树会生成场景的渲染树，决定渲染顺序，不过开发者并不需要关心这些，只要在编辑器中保障显示效果正确即可。在编辑器的 Node Tree 层级管理器中，开发者可以调整逻辑树的顺序和父子关系。</p>
-<h2 id="场景管理"><a href="#场景管理" class="headerlink" title="场景管理"></a>场景管理</h2><p>在 Cocos Creator 中，开发者在编辑器中搭建完的场景，所有数据会保存为一个 scene-name.fire 文件，存在资源数据库（Asset Database）中。开发者可以通过 cc.director.loadScene 来加载一个场景资源，参见具体范例：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> sceneName = <span class="string">'scene-name'</span>;</div><div class="line"><span class="keyword">var</span> onLaunched = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'Scene '</span> + sceneName + <span class="string">' launched'</span>);</div><div class="line">&#125;;</div><div class="line"><span class="comment">// 第一个参数为场景的名字，第二个可选参数为场景加载后的回调函数</span></div><div class="line">cc.director.loadScene(sceneName, onLaunched);</div></pre></td></tr></table></figure></p>
-</blockquote>
-<p>此外，我们提供了访问场景节点的接口：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 获取逻辑树的场景节点</span></div><div class="line"><span class="keyword">var</span> logicScene = cc.director.getScene();</div></pre></td></tr></table></figure></p>
-<blockquote>
-<p>在 Cocos Creator 中，游戏场景（Scene）是开发时组织游戏内容的中心，也是呈现给玩家所有游戏内容的载体。</p>
-<h3 id="Canvas"><a href="#Canvas" class="headerlink" title="Canvas"></a>Canvas</h3><p>打开场景后，层级管理器中会显示当前场景中的所有节点和他们的层级关系，Canvas可以被称为画布节点或渲染根节点。</p>
-<p>组件系统变成了整个引擎的核心，组件可以以各种各样的方式扩展逻辑节点的功能。甚至可以说，逻辑节点本身不应该包含任何实际游戏逻辑，它应该由各种逻辑组件组合出完整的逻辑。</p>
-<p>Cocos Creator 中，子节点坐标系的坐标原点就是父节点的坐标位置，也就是其锚点的位置。这样的修改对于编辑器更友好。<br><img src="/images/cocos_p.png" alt="Alt text"></p>
-</blockquote>
-<h3 id="Texture-和-SpriteFrame-资源类型"><a href="#Texture-和-SpriteFrame-资源类型" class="headerlink" title="Texture 和 SpriteFrame 资源类型"></a>Texture 和 SpriteFrame 资源类型</h3><blockquote>
-<p>SpriteFrame 是核心渲染组件 Sprite 所使用的资源，设置或替换 Sprite 组件中的 spriteFrame 属性，就可以切换显示的图像。</p>
-<h3 id="图集资源（Atlas）"><a href="#图集资源（Atlas）" class="headerlink" title="图集资源（Atlas）"></a>图集资源（Atlas）</h3><p>图集（Atlas）也称作 Sprite Sheet，是游戏开发中常见的一种美术资源。图集是通过专门的工具如TexturePacker等将多张图片合并成一张大图，并通过 plist 等格式的文件索引的资源。可供 Cocos Creator 使用的图集资源由 plist 和 png 文件组成。</p>
-<p><strong>在游戏中使用多张图片合成的图集作为美术资源，有以下优势：</strong><br>合成图集时会去除每张图片周围的空白区域，加上可以在整体上实施各种优化算法，合成图集后可以大大减少游戏包体和内存占用<br>多个 Sprite 如果渲染的是来自同一张图集的图片时，这些 Sprite 可以使用同一个渲染批次来处理，大大减少 CPU 的运算时间，提高运行效率。</p>
-</blockquote>
-<h3 id="字体资源"><a href="#字体资源" class="headerlink" title="字体资源"></a>字体资源</h3><blockquote>
-<p>Cocos Creator 制作的游戏中可以使用三类字体资源：系统字体，动态字体和位图字体。</p>
-</blockquote>
-<h3 id="使用-cc-Class-声明类型"><a href="#使用-cc-Class-声明类型" class="headerlink" title="使用 cc.Class 声明类型"></a>使用 cc.Class 声明类型</h3><blockquote>
-<p>cc.Class 是一个很常用的 API，用于声明 Cocos Creator 中的类，为了方便区分，我们把使用 cc.Class 声明的类叫做 CCClass。</p>
-<h4 id="定义-CCClass"><a href="#定义-CCClass" class="headerlink" title="定义 CCClass"></a>定义 CCClass</h4><p>调用 cc.Class，传入一个原型对象，在原型对象中以<code>键值对</code>的形式设定所需的类型参数，就能创建出所需要的类。</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var Sprite = cc.Class(&#123;</div><div class="line">    name: &quot;sprite&quot;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<blockquote>
-<p>以上代码用 cc.Class 创建了一个类型，并且赋给了 Sprite 变量。同时还将类名设为 “sprite”，类名用于序列化，一般可以省略。</p>
-<h4 id="实例化"><a href="#实例化" class="headerlink" title="实例化:"></a>实例化:</h4><p>Sprite 变量保存的是一个 JavaScript 构造函数，可以直接 new 出一个对象：</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var obj = new Sprite();</div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      Cocos Creator 是一款以内容创作为导向的新型游戏开发工具，它完整集成了组件化的 Cocos2d-x WEB 版本，可发布游戏到 Web，iOS，Android，Mac，Windows等平台，更支持直接发布 Cocos Play 平台，把握手机页游渠道的快速发展带来的新机遇。
-    
-    </summary>
-    
-      <category term="游戏" scheme="http://yoursite.com/categories/%E6%B8%B8%E6%88%8F/"/>
-    
-    
-      <category term="Cocos creator" scheme="http://yoursite.com/tags/Cocos-creator/"/>
-    
-  </entry>
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
   
-  <entry>
-    <title>Windows下如何关闭某个端口</title>
-    <link href="http://yoursite.com/2016/10/05/Windows%E4%B8%8B%E5%A6%82%E4%BD%95%E5%85%B3%E9%97%AD%E6%9F%90%E4%B8%AA%E7%AB%AF%E5%8F%A3/"/>
-    <id>http://yoursite.com/2016/10/05/Windows下如何关闭某个端口/</id>
-    <published>2016-10-05T04:57:48.000Z</published>
-    <updated>2016-10-05T05:30:11.139Z</updated>
-    
-    <content type="html"><![CDATA[<p>hexo - 使用默认localhost:4000端口访问本地blog一直无响应，因为该端口被占用了。<br>解决办法：</p>
-<blockquote>
-<p>Windows下关闭某个端口，这里我们关闭4000端口。<br>按下Win+R调出命令行窗口，输入netstat -aon|findstr “4000”，找到指定行最后一列的数字（PID），我们这里是2644.<br>输入tasklist|findstr “2644”，发现是foxitprotect.exe占用了4000端口。<br>再次输入taskkill /f /t /im foxitprotect.exe结束该进程。<br>原来是pdf阅读器占用了该端口，找到该软件，卸载掉即可。<br><img src="/images/port.png" alt="Alt text"></p>
-</blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      解决hexo - 使用localhost:4000访问本地blog一直无响应的问题。
-    
-    </summary>
-    
-      <category term="Window" scheme="http://yoursite.com/categories/Window/"/>
-    
-    
-      <category term="skill" scheme="http://yoursite.com/tags/skill/"/>
-    
-  </entry>
+
+
+
   
-  <entry>
-    <title>你不知道的JavaScript01--原生函数</title>
-    <link href="http://yoursite.com/2016/10/05/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84JavaScript01-%E5%8E%9F%E7%94%9F%E5%87%BD%E6%95%B0/"/>
-    <id>http://yoursite.com/2016/10/05/你不知道的JavaScript01-原生函数/</id>
-    <published>2016-10-05T04:37:22.000Z</published>
-    <updated>2016-10-05T04:42:33.840Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="JavaScript学习笔记01"><a href="#JavaScript学习笔记01" class="headerlink" title="JavaScript学习笔记01"></a>JavaScript学习笔记01</h2><p>@(JavaScript)</p>
-<h3 id="原生函数"><a href="#原生函数" class="headerlink" title="原生函数"></a>原生函数</h3><blockquote>
-<p>原生函数可以当做构造函数来使用，通过构造函数（如 <code>new String(&quot;abc&quot;)</code>）创建出来的是封装了基本类型值（如 <code>&quot;abc&quot;</code>）的封装对象。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span>  string = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">"abc"</span>);</div><div class="line"><span class="built_in">console</span>.log(string);  <span class="comment">// [String: 'abc']</span></div><div class="line"><span class="built_in">console</span>.log(string <span class="keyword">instanceof</span> <span class="built_in">String</span>);  <span class="comment">// true</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> string);  <span class="comment">// object</span></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(string));  <span class="comment">// [object String]</span></div></pre></td></tr></table></figure></p>
-</blockquote>
-<h4 id="内部属性"><a href="#内部属性" class="headerlink" title="内部属性"></a>内部属性</h4><blockquote>
-<p>所有typeof返回值为<code>&quot;object&quot;</code>的对象都包含了一个内部属性，可以通过<code>Object.prototype.toString(..)</code>查看。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]))  <span class="comment">// [object Array]</span></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="literal">true</span>))  <span class="comment">// [object Boolean]</span></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(<span class="number">42</span>))  <span class="comment">// [object Number]</span></div></pre></td></tr></table></figure></p>
-</blockquote>
-<h4 id="封装对象包装"><a href="#封装对象包装" class="headerlink" title="封装对象包装"></a>封装对象包装</h4><blockquote>
-<p>基本类型没有 <code>.length</code>和<code>.toString()</code>等这样的属性和方法，需要封装对象才可使用，此时JavaScript会为基本类型值自动包装成一个封装对象，浏览器对此也进行了优化，因此应优先考虑用基本类型值，而不是<code>new  String(&quot;abc&quot;)</code>新对象。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span>  a = <span class="string">"abc"</span>;</div><div class="line"><span class="built_in">console</span>.log(a.length); <span class="comment">// 3</span></div><div class="line"><span class="built_in">console</span>.log(a.toUpperCase()); <span class="comment">//ABC</span></div></pre></td></tr></table></figure></p>
-<p>一般不推荐直接使用封装对象，如果想要自行封装基本类型值，可以使用<code>Object(..)</code>函数（不带<code>new</code>关键字）。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="string">"abc"</span>;</div><div class="line"><span class="keyword">var</span> b = <span class="keyword">new</span> <span class="built_in">String</span>(a);</div><div class="line"><span class="keyword">var</span> c = <span class="built_in">Object</span>(a);</div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> a);  <span class="comment">// string</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> b);  <span class="comment">// object</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> c);  <span class="comment">// object</span></div><div class="line"><span class="built_in">console</span>.log(b <span class="keyword">instanceof</span> <span class="built_in">String</span>);  <span class="comment">// true</span></div><div class="line"><span class="built_in">console</span>.log(c <span class="keyword">instanceof</span> <span class="built_in">String</span>);  <span class="comment">// true</span></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(b));  <span class="comment">// [object String]</span></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(c)); <span class="comment">// [object String]</span></div></pre></td></tr></table></figure></p>
-</blockquote>
-<h4 id="拆封"><a href="#拆封" class="headerlink" title="拆封"></a>拆封</h4><blockquote>
-<p>如果想要得到封装对象的基本类型值，可以使用valueof()函数:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">"abc"</span>);</div><div class="line"><span class="keyword">var</span> b = <span class="keyword">new</span> <span class="built_in">Boolean</span>(<span class="literal">true</span>);</div><div class="line">a.valueof();  <span class="comment">// "abc"</span></div><div class="line">b.valueof();  <span class="comment">// true</span></div></pre></td></tr></table></figure></p>
-</blockquote>
-<h4 id="原生函数作为构造函数"><a href="#原生函数作为构造函数" class="headerlink" title="原生函数作为构造函数"></a>原生函数作为构造函数</h4><blockquote>
-<p>构造函数<code>Array(..)</code>不要求必须带<code>new</code>关键字，不带时，系统会自动补上。<code>Array</code>构造函数只带一个数字参数的时候，该参数会被当做数组的预设长度，而非一个元素。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="built_in">Array</span>(<span class="number">3</span>);</div><div class="line"><span class="built_in">console</span>.log(a.length);  <span class="comment">// 3</span></div></pre></td></tr></table></figure></p>
-<p>创建包含<code>undefined</code>的数组：<code>apply(..)</code>是一个工具，适用于所有对象，它会以一种特殊的方式来调用传递给它的函数。第一个参数是<code>this</code>对象，第二个必须是一个数组（或类数组对象，array-like object），数组中的值被用作函数的参数。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="built_in">Array</span>.apply(<span class="literal">null</span>,&#123; <span class="attr">length</span>:<span class="number">3</span>&#125;);</div><div class="line"><span class="built_in">console</span>.log(a);  <span class="comment">// [ undefined, undefined, undefined ]</span></div></pre></td></tr></table></figure></p>
-</blockquote>
-<h4 id="Object-、Function-、RegExp"><a href="#Object-、Function-、RegExp" class="headerlink" title="Object(..)、Function(..)、RegExp(..)"></a>Object(..)、Function(..)、RegExp(..)</h4><blockquote>
-<p>尽量不要使用<code>Object(..)、Function(..)、Regexp(..)</code>，在实际情况中没有必要使用<code>new Object()</code>来创建对象，因为这样无法像常量形式那样一次设定多个属性，而必须逐一设定。强烈建议使用常量形式定义正则表达式，语法简单、效率高。</p>
-<h4 id="Data-、Error"><a href="#Data-、Error" class="headerlink" title="Data(..)、Error(..)"></a>Data(..)、Error(..)</h4><p>创建日起对象必须使用<code>new Date()</code>。<code>Date(..)</code>可以带参数，用来指定日期时间，若不带参数则使用当前的如期和时间。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log((<span class="keyword">new</span> <span class="built_in">Date</span>()).getDate());  <span class="comment">// 28</span></div></pre></td></tr></table></figure></p>
-<p>构造函数<code>Error(..)</code>,带不带<code>new</code>关键字都可以。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">x</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (!x)</div><div class="line">  <span class="keyword">throw</span>  <span class="built_in">Error</span>(<span class="string">"x not found"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-</blockquote>
-<h4 id="Symbol"><a href="#Symbol" class="headerlink" title="Symbol(..)"></a>Symbol(..)</h4><blockquote>
-<p>基本数据类型，符号(<code>Symbol</code>)是具有唯一性的特殊值，用它来命名对象属性不容易导致重名，符号还可以自行定义，<code>Symbol</code>以静态属性形式出现，如<code>Symbol.create</code>等、不能用<code>new</code>关键字创建。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> mysym  = <span class="built_in">Symbol</span>(<span class="string">"abcd"</span>);</div><div class="line"><span class="built_in">console</span>.log(mysym);  <span class="comment">// Symbol(abcd)</span></div><div class="line"><span class="keyword">var</span> a = &#123;&#125;;</div><div class="line">a[mysym] = <span class="string">"apple"</span>;</div><div class="line"><span class="built_in">console</span>.log(a[mysym]);  <span class="comment">// apple</span></div></pre></td></tr></table></figure></p>
-</blockquote>
-<h4 id="原生原型"><a href="#原生原型" class="headerlink" title="原生原型"></a>原生原型</h4><blockquote>
-<p>原生构造函数都有自己的<code>.prototype</code>对象，如<code>Array.prototype</code>等，这些对象包含其对应子类型所有的行为特征。比如将字符串封装成字符串对象，就可以访问<code>String.prototype</code>中定义的方法。</p>
-<p>根据文档约定，可将<code>.prototype.</code>替换为<code>#</code>，如<code>String.prototype.trim()</code>简写为<code>String#trim()</code>来去掉字符串的前后空格，<code>Array#concat(..)</code>合并数组，<code>Number#tofixed(..)</code>将数字转换为指定长度的整数字符串，其他对象同样如此。</p>
-<p><code>Function.prototype</code>是一个空函数，<code>Array.prototype</code>是一个空数组，<code>RegExp.prototype</code>是一个空正则表达式，对未赋值的变量来说，它们是很好的默认值，在ES6中可通过函数声明的内置语法来设置(取而代之)。</p>
-</blockquote>
-]]></content>
-    
-    <summary type="html">
-    
-      原生函数可以当做构造函数来使用，通过构造函数（如 new String(&quot;abc&quot;)）创建出来的是封装了基本类型值（如 &quot;abc&quot;）的封装对象。
-    
-    </summary>
-    
-      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
-    
-  </entry>
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
   
-  <entry>
-    <title>你不知道的JavaScript00——原型</title>
-    <link href="http://yoursite.com/2016/10/05/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84JavaScript00%E2%80%94%E2%80%94%E5%8E%9F%E5%9E%8B/"/>
-    <id>http://yoursite.com/2016/10/05/你不知道的JavaScript00——原型/</id>
-    <published>2016-10-05T04:21:43.000Z</published>
-    <updated>2016-10-05T04:40:22.522Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="JavaScript学习笔记00"><a href="#JavaScript学习笔记00" class="headerlink" title="JavaScript学习笔记00"></a>JavaScript学习笔记00</h3><p>@(JavaScript)</p>
-<hr>
-<blockquote>
-<p>JavaScript 是一种弱类型的语言。</p>
-</blockquote>
-<h3 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h3><p> <img src="/images/数据类型.png" alt="Alt text"></p>
-<blockquote>
-<ul>
-<li>JavaScript 中的变量是没有类型，值有才类型，变量持有值的类型，类型定义了值的行为特征。</li>
-<li>对变量执行<code>typeof</code>操作时，得到的是该变量持有的值的类型。</li>
-<li><code>typeof</code>运算符总会返回一个字符串。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typeof</span> <span class="keyword">typeof</span> <span class="number">42</span>; <span class="comment">// "string"</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-</blockquote>
-<p><em><code>typeof 42</code> 首先返回一个字符串 <code>&quot;number&quot;</code>，然后<code>typeof &quot;number&quot;</code>,返回 <code>&quot;string&quot;</code></em>。</p>
-<blockquote>
-<p>在作用域中声明但还没有赋值的变量为<code>undefined</code>，是值的一种，没有在作用域中声明过的变量为<code>undeclared</code>，两个不可混为一谈。</p>
-</blockquote>
-<h3 id="值"><a href="#值" class="headerlink" title="值"></a>值</h3><h4 id="数组与字符串"><a href="#数组与字符串" class="headerlink" title="数组与字符串"></a>数组与字符串</h4><blockquote>
-<p>对数组声明后即可向其加入值，无需预先指定数组大小。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [ ];</div><div class="line">arr.length; <span class="comment">// 0</span></div><div class="line">a[<span class="number">0</span>] = <span class="number">1</span>;</div><div class="line">a[<span class="number">1</span>] = <span class="string">"2"</span>;</div><div class="line">a[<span class="number">2</span>] = [<span class="number">3</span>];</div><div class="line">a.length; <span class="comment">// 3</span></div></pre></td></tr></table></figure></p>
-<p>数组不仅可以通过数字下标作为索引，也可以用包含字符串键值和属性，但这些不计入数组长度内。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [ ];</div><div class="line"></div><div class="line">a[<span class="number">0</span>] = <span class="string">"2"</span>;</div><div class="line">a[<span class="number">1</span>] = <span class="number">20</span>;</div><div class="line">arr.length; <span class="comment">// </span></div><div class="line">a[<span class="string">"apple"</span>] = <span class="number">1</span>;</div><div class="line">a.length; <span class="comment">// 2</span></div><div class="line">a[<span class="string">"apple"</span>] = <span class="number">1</span>;</div><div class="line">a.apple = <span class="number">1</span>;</div></pre></td></tr></table></figure>
-<p>如果字符串键值可以被强制类型转换为十进制数字的话，依旧会被当做数字索引来处理。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [ ];</div><div class="line">a[<span class="string">"13"</span>] = <span class="number">22</span>;</div><div class="line">a.lenth; <span class="comment">// 14</span></div></pre></td></tr></table></figure></p>
-<p>不建议在数组中加入字符串作为下标，建议使用数字下标。<br>JavaScript 中的字符串是不可变的，而数组可变。字符串不可变是指字符串的成员函数不会改变其原始值，而是创建并返回一个新的字符串。</p>
-</blockquote>
-<p>字符串反转：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> chars = <span class="string">"ufo"</span>;</div><div class="line"><span class="keyword">var</span> reverseChars = chars.split(<span class="string">""</span>).reverse().join(<span class="string">""</span>)<span class="comment">//ofu</span></div></pre></td></tr></table></figure></p>
-<p><em><code>chars.split(&quot;&quot;)</code>将字符串转换为字符数组，<code>.reverse()</code>将数组中的字符逆序排序，<code>.join(&quot;&quot;)</code>将数组中的字符拼接回字符串</em>。</p>
-<h4 id="数字"><a href="#数字" class="headerlink" title="数字"></a>数字</h4><blockquote>
-<p>JavaScript 中只有一种数值类型：<code>number</code>(数字)，包括十进制的小数和没有小数的整数。</p>
-<p>#####数字语法<br>数字前面的0和小数点后最后面的0可以省略,但不建议这样写。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> num = <span class="number">.42</span>;</div><div class="line"><span class="keyword">var</span> num = <span class="number">42.</span>;</div></pre></td></tr></table></figure></p>
-<p>tofixed(..),可以指定小数部分显示的位数，输出结果为字符串形式。<br> toprecision(..)，用来指定有效位数。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> num = <span class="number">13.1341</span>;</div><div class="line">num.tofixed(<span class="number">3</span>); <span class="comment">// "13.134"</span></div><div class="line">num.toprecision(<span class="number">4</span>); <span class="comment">// "13.13"</span></div><div class="line">(<span class="number">42</span>).tofixed(<span class="number">3</span>); <span class="comment">// "42.000"</span></div><div class="line"><span class="number">42.</span>.tofixed(<span class="number">3</span>); <span class="comment">// "42.000"  罕见</span></div><div class="line"><span class="number">0.42</span>.tofixed(<span class="number">3</span>); <span class="comment">// "0.420" 罕见</span></div><div class="line"><span class="number">42.</span>tofixed(<span class="number">3</span>); <span class="comment">// 语法错误，相当于(42)tofixed(3);</span></div><div class="line"><span class="number">42</span> .tofixed(<span class="number">3</span>); <span class="comment">// "42.000"  不推荐</span></div></pre></td></tr></table></figure></p>
-<p>进制，从ES6开始采用严格模式(strict mode)，为了代码的易读性，建议使用小写的0b、0o、0x代表二进制、八进制和十六进制。</p>
-<h5 id="整数检测"><a href="#整数检测" class="headerlink" title="整数检测"></a>整数检测</h5><p> 检测一个数是否为整数<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Number</span>.isInteger(<span class="number">42.0</span>); <span class="comment">// true</span></div></pre></td></tr></table></figure></p>
-</blockquote>
-<p> 检测一个数是否为安全的整数(最大值为 Number.MAX_SAFE_NTEGER == Math.pow(2,53)-1 )<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Number</span>.isSafeInteger(<span class="built_in">Math</span>.pow(<span class="number">2</span>,<span class="number">53</span>)<span class="number">-1</span>); <span class="comment">// true</span></div></pre></td></tr></table></figure></p>
-<h4 id="特殊数值"><a href="#特殊数值" class="headerlink" title="特殊数值"></a>特殊数值</h4><h5 id="不是值的值"><a href="#不是值的值" class="headerlink" title="不是值的值"></a>不是值的值</h5><blockquote>
-<ul>
-<li><p>undefined 数据类型只有一个的值，即 undefined，表示没有值、从未赋值，通过void 运算符即可得到该值。</p>
-</li>
-<li><p>null 类型也只有一个值，即 null，表示空值，目前没有值。</p>
-</li>
-</ul>
-<p>两者常用来表示”空值”或”不是值”的值。</p>
-<h5 id="特殊的数字"><a href="#特殊的数字" class="headerlink" title="特殊的数字"></a>特殊的数字</h5><ul>
-<li>不是数字的数字<code>NaN(not a number)</code>，也可理解为”无效数值”、”坏数值”。<code>NaN</code> 是一个特殊值，它和自身不相等，是唯一一个非自反值(即<code>x===x</code>不成立)，而<code>NaN != NaN</code>为 <code>true</code>。“不是数字的数字”仍然是数字类型。</li>
-</ul>
-<p>如果需要判断一个值是否是<code>NaN</code>，建议使用<code>Number.isNaN(..)</code>。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(!<span class="built_in">Number</span>.isNaN)&#123;</div><div class="line"><span class="built_in">Number</span>.isNaN = <span class="function"><span class="keyword">function</span>(<span class="params">n</span>) </span>&#123;</div><div class="line"><span class="keyword">return</span> n !== n;</div><div class="line">&#125;;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> a = <span class="number">2</span> / <span class="string">"foo"</span>;</div><div class="line"><span class="keyword">var</span> b = <span class="string">"foo"</span>;</div><div class="line"><span class="built_in">Number</span>.isNaN( a ); <span class="comment">// true</span></div></pre></td></tr></table></figure></p>
-<ul>
-<li>无穷数,相对于 <code>Infinity</code>， <code>Number.MAX_ VALUE + Math.pow(2, 969)</code> 与 <code>Number.MAX_VALUE</code> 更为接近，因此它被“向下取整”（ round down）；而 <code>Number.MAX_VALUE + Math.pow(2, 970)</code> 与 <code>Infinity</code> 更为接近，所以它被“向上取整”（ round up）。</li>
-</ul>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">1</span> / <span class="number">0</span>; <span class="comment">// Infinity</span></div><div class="line"><span class="keyword">var</span> b = <span class="number">-1</span> / <span class="number">0</span>; <span class="comment">// -Infinity</span></div></pre></td></tr></table></figure>
-<blockquote>
-<ul>
-<li>零值，加法和减法运算不会得到负零（ negative zero）。根据规范，对负零进行字符串化会返回 “0”，将其从字符串转换为数字，得到的结果是准确的。<code>-0==0</code>，<code>-0===0</code>，都为<code>true</code>，ES6 中新加入了一个工具方法 Object.is(..) 来判断两个值是否绝对相等。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">0</span> / <span class="number">-3</span>; <span class="comment">// -0</span></div><div class="line"><span class="keyword">var</span> b = <span class="number">2</span>/<span class="string">"foo"</span> ; <span class="comment">// NaN</span></div><div class="line"><span class="comment">// 但是规范定义的返回结果是这样！</span></div><div class="line">a.toString(); <span class="comment">// "0"</span></div><div class="line">a + <span class="string">""</span>; <span class="comment">// "0"</span></div><div class="line"><span class="built_in">String</span>( a ); <span class="comment">// "0"</span></div><div class="line"><span class="built_in">JSON</span>.stringify( a ); <span class="comment">// "0"</span></div><div class="line"></div><div class="line">+<span class="string">"-0"</span>; <span class="comment">// -0</span></div><div class="line"><span class="built_in">Number</span>( <span class="string">"-0"</span> ); <span class="comment">// -0</span></div><div class="line"><span class="built_in">JSON</span>.parse( <span class="string">"-0"</span> ); <span class="comment">// -0</span></div><div class="line">	</div><div class="line"><span class="built_in">Object</span>.is( b, <span class="literal">NaN</span> ); <span class="comment">// true</span></div><div class="line"><span class="built_in">Object</span>.is( a, <span class="number">-0</span> ); <span class="comment">// true</span></div><div class="line"><span class="built_in">Object</span>.is( a, <span class="number">0</span> ); <span class="comment">// false</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-</blockquote>
-<h4 id="值和引用"><a href="#值和引用" class="headerlink" title="值和引用"></a>值和引用</h4><blockquote>
-<p>简单值（即标量基本类型值， scalar primitive） 总是通过值复制的方式来赋值 / 传递，包括 <code>null</code>、 <code>undefined</code>、字符串、数字、布尔和 ES6 中的 <code>symbol</code>。</p>
-<p>复合值（ compound value）——对象（包括数组和封装对象）和函数，则总是通过引用复制的方式来赋值 / 传递。</p>
-<p>引用指向的是值本身而非变量，所以一个引用无法更改另一个引用的指向。我们无法自行决定用值复制还是引用复制，一切都由值的类型来决定。</p>
-<p><code>Arr.slice()</code> 不带参数会返回当前数组的一个浅复本（ shallow copy）。由于传递给函数的是指向该复本的引用，所以 <code>foo(Arr.slice(..))</code> 中的操作不会影响 <code>Arr</code> 指向的数组。</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line"><span class="keyword">var</span> b = a;</div><div class="line">a; <span class="comment">// [1,2,3]</span></div><div class="line">b; <span class="comment">// [1,2,3]</span></div><div class="line"><span class="comment">// 然后</span></div><div class="line">b = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</div><div class="line">a; <span class="comment">// [1,2,3]</span></div><div class="line">b; <span class="comment">// [4,5,6]</span></div></pre></td></tr></table></figure>
-<blockquote>
-<p>标量基本类型值是不可更改的（字符串和布尔也是如此）。如果一个数字对象的标 量基本类型值是 2，那么该值就不能更改，除非创建一个包含新值的数字对象。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">x</span>) </span>&#123;</div><div class="line">x = x + <span class="number">1</span>;</div><div class="line">x; <span class="comment">// 3</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> a = <span class="number">2</span>;</div><div class="line"><span class="keyword">var</span> b = <span class="keyword">new</span> <span class="built_in">Number</span>( a ); <span class="comment">// Object(a)也一样</span></div><div class="line">foo( b );</div><div class="line"><span class="built_in">console</span>.log( b ); <span class="comment">// 是2，不是3</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">wrapper</span>) </span>&#123;</div><div class="line">wrapper.a = <span class="number">42</span>;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> obj = &#123;</div><div class="line"><span class="attr">a</span>: <span class="number">2</span></div><div class="line">&#125;;</div><div class="line">foo( obj );</div><div class="line">obj.a; <span class="comment">// 42</span></div></pre></td></tr></table></figure></p>
-</blockquote>
-<h4 id="隐式转换"><a href="#隐式转换" class="headerlink" title="隐式转换"></a>隐式转换</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> num = <span class="string">"32"</span>+<span class="number">32</span>;<span class="comment">// "3232"</span></div><div class="line"><span class="keyword">var</span> num = <span class="string">"32"</span><span class="number">-32</span>;<span class="comment">// 0</span></div><div class="line"></div><div class="line">	    </div><div class="line">“<span class="number">1.23</span>” == <span class="number">1.23</span></div><div class="line"><span class="number">0</span> == <span class="literal">false</span></div><div class="line"><span class="literal">null</span> == <span class="literal">undefined</span></div><div class="line"><span class="keyword">new</span> <span class="built_in">Object</span>() == <span class="keyword">new</span> <span class="built_in">Object</span>()</div><div class="line">[<span class="number">1</span>, <span class="number">2</span>] == [<span class="number">1</span>, <span class="number">2</span>]</div><div class="line"><span class="comment">/*类型不同，返回false</span></div><div class="line">类型相同*/</div><div class="line"><span class="literal">NaN</span> ≠ <span class="literal">NaN</span></div><div class="line"><span class="keyword">new</span> <span class="built_in">Object</span> ≠ <span class="keyword">new</span> <span class="built_in">Object</span></div><div class="line"><span class="literal">null</span> === <span class="literal">null</span></div><div class="line"><span class="literal">undefined</span> === <span class="literal">undefined</span></div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      JavaScript 是一种弱类型的语言。
-    
-    </summary>
-    
-      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
-    
-  </entry>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
   
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2016/10/04/hello-world/"/>
-    <id>http://yoursite.com/2016/10/04/hello-world/</id>
-    <published>2016-10-03T23:51:56.317Z</published>
-    <updated>2016-10-05T04:52:11.417Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<p>&lt;&gt;</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<h3 id="Inser-a-image"><a href="#Inser-a-image" class="headerlink" title="Inser a image"></a>Inser a image</h3><blockquote>
-<p>要加入图片，应该在source下建立一个与博文_posts同级别的文件夹 images,将图片放入。路片路径形如：<br>/hexo/source/images/myImg.png</p>
-</blockquote>
-<p>在博客中插入，要使用相对路径，应写为 /images/myImg.png</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![Alt text](/images/数据类型.png)</div></pre></td></tr></table></figure>
-<p>或者：<br><img src="/images/数据类型.png" alt="Alt text"><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;img src=<span class="string">"/images/mylmg.png"</span> width=50% height=50% align=center/&gt;</div></pre></td></tr></table></figure></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-    
-    </summary>
-    
-    
-  </entry>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
   
-</feed>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"sstd521"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
