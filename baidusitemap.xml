@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://yoursite.com/2016/10/31/github%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2016-10-31T11:36:38.669Z</lastmod>
+    <data>
+        <display>
+        <title>github入门</title>
+        <pubTime>2016-10-31T11:34:54.000Z</pubTime>
+        
+        <tag>github</tag>
+         
+         
+           
+             
+              <breadCrumb title="代码托管" url="http://yoursite.com/categories/%E4%BB%A3%E7%A0%81%E6%89%98%E7%AE%A1/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2016/10/21/JavaScript%E4%B9%8B%E6%95%B0%E7%BB%84/</loc>
     <lastmod>2016-10-21T13:30:12.750Z</lastmod>
     <data>
@@ -181,6 +201,7 @@
     </data>
     </url>
 
+    
     
     
     
