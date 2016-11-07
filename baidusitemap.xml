@@ -4,7 +4,27 @@
 
     
   <url>
-    <loc>http://yoursite.com/2016/11/07/SQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A/</loc>
+    <loc>http://yoursite.com/2016/11/07/SQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2016-11-07T11:03:28.859Z</lastmod>
+    <data>
+        <display>
+        <title>SQL学习笔记</title>
+        <pubTime>2016-11-07T11:01:49.000Z</pubTime>
+        
+        <tag>SQL</tag>
+         
+         
+           
+             
+              <breadCrumb title="数据库" url="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/11/07/SQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A01/</loc>
     <lastmod>2016-11-07T10:54:37.231Z</lastmod>
     <data>
         <display>
