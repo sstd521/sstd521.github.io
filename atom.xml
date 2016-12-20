@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-12-04T09:52:25.000Z</updated>
+  <updated>2016-12-20T05:28:51.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,18 +16,80 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Cocos 属性</title>
+    <link href="http://yoursite.com/2016/12/20/Cocos-%E5%B1%9E%E6%80%A7/"/>
+    <id>http://yoursite.com/2016/12/20/Cocos-属性/</id>
+    <published>2016-12-20T05:23:40.000Z</published>
+    <updated>2016-12-20T05:28:51.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Cocos-属性"><a href="#Cocos-属性" class="headerlink" title="Cocos 属性"></a>Cocos 属性</h1><p>智能机的普及带动手机玩家的快速增长，预计2014年依然会保持较快增幅。</p>
+<h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><p>完整声明</p>
+<p>有些情况下，我们需要为属性声明添加参数，这些参数控制了属性在 属性检查器 中的显示方式，以及属性在场景序列化过程中的行为。例如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">properties: &#123;</div><div class="line"><span class="attr">score</span>: &#123;</div><div class="line"><span class="attr">default</span>: <span class="number">0</span>,</div><div class="line"><span class="attr">displayName</span>: <span class="string">"Score (player)"</span>,</div><div class="line"><span class="attr">tooltip</span>: <span class="string">"The score of player"</span>,</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>以上代码为 score 属性设置了三个参数 default, displayName 和 tooltip。这几个参数分别指定了 score 的默认值为 0，在 属性检查器 里，其属性名将显示为：“Score (player)”，并且当鼠标移到参数上时，显示对应的 Tooltip。</p>
+</blockquote>
+<p>下面是常用参数：<br> default: 设置属性的默认值，这个默认值仅在组件第一次添加到节点上时才会用到<br>type: 限定属性的数据类型，详见 CCClass 进阶参考：type 参数<br>visible: 设为 false 则不在 属性检查器 面板中显示该属性<br>serializable: 设为 false 则不序列化（保存）该属性<br>displayName: 在 属性检查器 面板中显示成指定名字<br>tooltip: 在 属性检查器 面板中添加属性的 Tooltip</p>
+<p>type 参数<br>当默认值是一个枚举（cc.Enum）时，由于枚举值本身其实也是一个数字（number），所以要将 type 设置为枚举类型，才能在 属性检查器 中显示为枚举下拉框。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">wrap: &#123;</div><div class="line">   <span class="attr">default</span>: Texture.WrapMode.Clamp,</div><div class="line">   <span class="attr">type</span>: Texture.WrapMode</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>url 参数</p>
+<p>如果属性是用来访问 Raw Asset 资源的 url，为了能在 属性检查器 中选取资源，或者能正确序列化，你需要指定 url 参数：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">texture: &#123;</div><div class="line"><span class="attr">default</span>: <span class="string">""</span>,</div><div class="line"><span class="attr">url</span>: cc.Texture2D</div><div class="line">&#125;,</div></pre></td></tr></table></figure>
+<p>override 参数</p>
+<p>所有属性都将被子类继承，如果子类要覆盖父类同名属性，需要显式设置 override 参数，否则会有重名警告：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">_id: &#123;</div><div class="line">default: &quot;&quot;,</div><div class="line">tooltip: &quot;my id&quot;,</div><div class="line">override: true</div><div class="line">&#125;,</div><div class="line">name: &#123;</div><div class="line">get: function () &#123;</div><div class="line">return this._name;</div><div class="line">&#125;,</div><div class="line">displayName: &quot;Name&quot;,</div><div class="line">override: true</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>属性延迟定义</p>
+<p>如果两个类相互引用，脚本加载阶段就会出现循环引用，循环引用将导致脚本加载出错：</p>
+<p>Game.js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var Item = require(&quot;Item&quot;);</div><div class="line"></div><div class="line"> var Game = cc.Class(&#123;</div><div class="line"> properties: &#123;</div><div class="line"> item: &#123;</div><div class="line"> default: null,</div><div class="line"> type: Item</div><div class="line"> &#125;</div><div class="line"> &#125;</div><div class="line"> &#125;);</div><div class="line"> module.exports = Game;</div></pre></td></tr></table></figure>
+<p>Item.js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var Game = require(&quot;Game&quot;);</div><div class="line">var Item = cc.Class(&#123;</div><div class="line">properties: &#123;</div><div class="line">game: &#123;</div><div class="line">default: null,</div><div class="line">type: Game</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">&#125;);</div><div class="line">module.exports = Item;</div></pre></td></tr></table></figure>
+<p>上面两个脚本加载时，由于它们在 require 的过程中形成了闭环，因此加载会出现循环引用的错误，循环引用时 type 就会变为 undefined。 因此我们提倡使用以下的属性定义方式：</p>
+<p>Game.js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var Game = cc.Class(&#123;</div><div class="line">properties: () =\&gt; (&#123;</div><div class="line">item: &#123;</div><div class="line">default: null,</div><div class="line">type: require(&quot;Item&quot;)</div><div class="line">&#125;</div><div class="line">&#125;)</div><div class="line">&#125;);</div><div class="line"></div><div class="line">module.exports = Game;</div></pre></td></tr></table></figure>
+<p>Item.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Item = cc.Class(&#123;</div><div class="line"><span class="attr">properties</span>: () =\&gt; (&#123;</div><div class="line"><span class="attr">game</span>: &#123;</div><div class="line"><span class="attr">default</span>: <span class="literal">null</span>,</div><div class="line"><span class="attr">type</span>: <span class="built_in">require</span>(<span class="string">"Game"</span>)</div><div class="line">&#125;</div><div class="line">&#125;)</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="built_in">module</span>.exports = Item;</div></pre></td></tr></table></figure>
+<p>这种方式就是将 properties 指定为一个 ES6 的箭头函数（lambda 表达式），箭头函数的内容在脚本加载过程中并不会同步执行，而是会被 CCClass 以异步的形式在所有脚本加载成功后才调用。因此加载过程中并不会出现循环引用，属性都可以正常初始化。</p>
+<p>箭头函数的用法符合 JavaScript 的 ES6 标准，并且 Creator 会自动将 ES6 转义为 ES5，用户不用担心浏览器的兼容问题。<br>你可以这样来理解箭头函数：</p>
+<p>// 箭头函数支持省略掉 <code>return</code> 语句，我们推荐的是这种省略后的写法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">properties: () =\&gt; (&#123;    // \&lt;- 箭头右边的括号 &quot;(&quot; 不可省略</div><div class="line">game: &#123;</div><div class="line">default: null,</div><div class="line">type: require(&quot;Game&quot;)</div><div class="line">&#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>// 如果要完整写出 <code>return</code>，那么上面的写法等价于：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">properties: () =\&gt; &#123;</div><div class="line">return &#123;</div><div class="line">game: &#123;</div><div class="line">default: null,</div><div class="line">type: require(&quot;Game&quot;)</div><div class="line">&#125;</div><div class="line">&#125;;      // \&lt;- 这里 return 的内容，就是原先箭头右边括号里的部分</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>`// 我们也可以不用箭头函数，而是用普通的匿名函数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">properties: function () &#123;</div><div class="line">return &#123;</div><div class="line">game: &#123;</div><div class="line">default: null,</div><div class="line">type: require(&quot;Game&quot;)</div><div class="line">&#125;</div><div class="line">&#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      Cocos 属性属性介绍
+    
+    </summary>
+    
+      <category term="Cocos" scheme="http://yoursite.com/categories/Cocos/"/>
+    
+    
+      <category term="Cocos" scheme="http://yoursite.com/tags/Cocos/"/>
+    
+  </entry>
+  
+  <entry>
     <title>他山之石</title>
     <link href="http://yoursite.com/2016/12/04/%E4%BB%96%E5%B1%B1%E4%B9%8B%E7%9F%B3/"/>
     <id>http://yoursite.com/2016/12/04/他山之石/</id>
     <published>2016-12-04T09:49:19.000Z</published>
-    <updated>2016-12-04T09:52:25.000Z</updated>
+    <updated>2016-12-04T16:28:12.000Z</updated>
     
     <content type="html"><![CDATA[<p>一门语言，是能够在很大程度上决定用这门语言开发的软件，拥有哪些特性的。语言作为软件生态圈的基石，决定了框架的使用难度和扩展难度。</p>
 <p>人们只关心你做出了什么成绩，以及做出这些成绩时的思考和方法，至于具体用的什么工具，nobody cares。<br>不再因为会用一个工具而沾沾自喜，不再因为别人会用一个工具而高看一眼，不再因为不会用一个工具而妄自菲薄。</p>
 <p>我希望以后回头看看我这段与时间赛跑的日子，能有一些属于我的东西留下，有一些东西能证明我的能力，不需要我多费口舌就能让别人知道我是谁。</p>
 <p>我的能力就这么多。我若全心工作，则必然忽略生活；我若用心生活，则必然一事无成；我若两者兼顾，又难免平庸</p>
-<p>为什么 写博客：<br>    1.写作博客的正确做法，那就是为读者创造价值。<br>    2.每天写博客，帮助自己养成了更多观察、更多探究的习惯。<br>    3.写作帮助我们整理自己的思想。博客其实是一种理性思维和表达能力的训练，很多时候我们写作博客，就是在做这种训练。<br>    4.我们需要与人交流，渴望了解全部的世界，博客帮助我们遇到那些其他方式无法遇到的人。<br>    5.博客最重要的读者，就是我自己。如果碰巧帮助了别人，那是额外的收获。即使没有人读，我觉得我也会继续，因为它帮助自己思考。</p>
-]]></content>
+<p>为什么写博客：</p>
+<pre><code>1. 写作博客的正确做法，那就是为读者创造价值。
+2.每天写博客，帮助自己养成了更多观察、更多探究的习惯。
+3.写作帮助我们整理自己的思想。博客其实是一种理性思维和表达能力的训练，很多时候我们写作博客，就是在做这种训练。
+4.我们需要与人交流，渴望了解全部的世界，博客帮助我们遇到那些其他方式无法遇到的人。
+5.博客最重要的读者，就是我自己。如果碰巧帮助了别人，那是额外的收获。即使没有人读，我觉得我也会继续，因为它帮助自己思考。
+</code></pre>]]></content>
     
     <summary type="html">
     
