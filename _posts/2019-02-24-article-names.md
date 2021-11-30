@@ -1,12 +1,14 @@
 ---
+layout: post
 title: 迭代器与生成器
 tags:
     - JavaScript
 date: 2019-02-24 13:36:51
 categories: 编程学习
 description: 迭代器与生成器速记。
-
 ---
+
+
 
 # 迭代器与生成器
 ## 定义
