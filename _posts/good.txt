@@ -1,0 +1,231 @@
+
+
+body{
+    margin: 10px 0 0;
+    font-family: -apple-system, "Helvetica Neue", Arial, "PingFang SC","Æ»·½ ³£¹æ", 'Lato',"lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-size: 15pt;
+    border-radius: 30px;
+    font-weight: normal;
+    line-height: 1.7em
+}
+
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+h6:hover {
+    color: #3f86b5;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit
+}
+.h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 21px;
+    margin-bottom: 10.5px
+}
+.h1 .small, .h1 small, .h2 .small, .h2 small, .h3 .small, .h3 small, h1 .small, h1 small, h2 .small, h2 small, h3 .small, h3 small {
+    font-size: 65%
+}
+
+.h4, .h5, .h6, h4, h5, h6 {
+    margin-top: 10.5px;
+    margin-bottom: 10.5px
+}
+
+.h4 .small, .h4 small, .h5 .small, .h5 small, .h6 .small, .h6 small, h4 .small, h4 small, h5 .small, h5 small, h6 .small, h6 small {
+    font-size: 75%
+}
+
+
+#ws { background-color: #FDF6E3; }
+
+.send { color:#77bb77; }
+.server { color:#7799bb; }
+.error { color:#AA0000; }
+
+table tr:nth-child(2n) {
+    background-color: #FDF6E3;
+}
+
+table {
+    padding: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 1em;
+    font: inherit;
+    border: 0;
+}
+
+tbody {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+table tr {
+    border: 0;
+    border-top: 1px solid #CCC;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+table tr:nth-child(2n) {
+    background-color: #F8F8F8;
+}
+
+table tr th, table tr td {
+    font-size: 1em;
+    border: 1px solid #CCC;
+    margin: 0;
+    padding: 0.5em 0.5em;
+}
+
+table tr th {
+    font-weight: bold;
+    background-color: #F0F0F0;
+}
+
+code, pre, #ws, #message {
+    font-family: Consolas;
+    font-size: 13pt;
+    letter-spacing: 0em;
+    border-radius: 3px;
+    background-color: #FDF6E3;
+    color: inherit;
+}
+
+code {
+    border: 1px solid #EAEAEA;
+    margin: 0 2px;
+    padding: 0 0px;
+    color: #c7254e;
+    padding: 0em 0em;
+    border-radius: 3px;
+    text-align:left;
+}
+
+pre {
+    border: 1px solid #CCCCCC;
+    overflow: auto;
+    padding: 4px 4px;
+}
+
+pre > code {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#ws {
+    background-color: #f8f8f8;
+}
+
+.send {
+    color: #77bb77;
+}
+
+.server {
+    color: #7799bb;
+}
+
+.error {
+    color: #AA0000;
+}
+
+table tr:nth-child(2n) {
+    background-color: #f8f8f8;
+}
+
+.hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 0.5em;
+    background: #FDF6E3;
+    color: black;
+}
+
+.hljs-comment,
+.hljs-quote {
+    color: #006a00;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal {
+    color: #aa0d91;
+}
+
+.hljs-name {
+    color: #008;
+}
+
+.hljs-variable,
+.hljs-template-variable {
+    color: #660;
+}
+
+.hljs-string {
+    color: #c41a16;
+}
+
+.hljs-regexp,
+.hljs-link {
+    color: #080;
+}
+
+.hljs-title,
+.hljs-tag,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-number,
+.hljs-meta {
+    color: #1c00cf;
+}
+
+.hljs-section,
+.hljs-class .hljs-title,
+.hljs-type,
+.hljs-attr,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-params {
+    color: #5c2699;
+}
+
+.hljs-attribute,
+.hljs-subst {
+    color: #000;
+}
+
+.hljs-formula {
+    background-color: #eee;
+    font-style: italic;
+}
+
+.hljs-addition {
+    background-color: #baeeba;
+}
+
+.hljs-deletion {
+    background-color: #ffc8bd;
+}
+
+.hljs-selector-id,
+.hljs-selector-class {
+    color: #9b703f;
+}
+
+.hljs-doctag,
+.hljs-strong {
+    font-weight: bold;
+}
+
+.hljs-emphasis {
+    font-style: italic;
+}
