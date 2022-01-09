@@ -1,13 +1,20 @@
 ---
 layout: post
-title: "article name test"
+title: "jekyll basic abc"
 category: 
 tags: []
 ---
 
-test
+Create your new page using:
+
 ```
-hello jekyll
+$ bundle exec jekyll page "My New Page"
 ```
 
 
+
+preview on local
+
+```
+bundle exec jekyll s
+```

@@ -1,21 +1,16 @@
 ---
-title: JavaScript之数组
-tags:
-  - JavaScript
-  - 数组
-date: 2016-10-21 21:28:23
-categories: 前端
 layout: post
-description: JavaScript数组的基本方法简介。
+title: "JavaScript之数组"
+category: [JavaScript]
+tags: [数组]
+date: 2016-10-21 21:28:23
 ---
+
 
 ## 数组
 
-@(JavaScript)
-
+> JavaScript数组的基本方法简介。
 ------
-
-[TOC]
 
 ### 数组元素的增删
 
@@ -26,7 +21,7 @@ array.push("sstd");  // 尾部追加
 array[array.length]=521; // 尾部追加
 array.unshift(5);  // 头部添加
 console.log(array);
-result：
+//result：
 [ 5, 22, 'sstd', 521 ]
 ```
 
@@ -52,13 +47,13 @@ console.log(array.length); // 1
 ```javascript
 var array = [[1, 2, 3], [4, 5, 6]];
 for (var i = 0; i < array.length; i++)
-    for (var j = 0; j < array[i].length; j++)
-        console.log(array[i][j]);
-        
+for (var j = 0; j < array[i].length; j++)
+console.log(array[i][j]);
+
 var arr = [15, 2, 110, 78, 65, 100];
 arr.forEach(function (x)
 {
-    console.log(x);
+console.log(x);
 })
 ```
 
@@ -72,9 +67,9 @@ var arr = [1,2,3];
 console.log(arr.join());
 console.log(arr.join("-"));
 function repeatString(str, n)
-    {
-            return new Array(n+1).join(str);
-    }
+{
+return new Array(n+1).join(str);
+}
 console.log(repeatString("Hi",3));
 result:
 1,2,3
@@ -102,7 +97,7 @@ arr.sort();
 console.log(arr);  // [ 110, 15, 2, 'a', 'c', 'd' ]
 arr.sort(function (a, b)
 {
-    return a-b;
+return a-b;
 });
 console.log(arr);  // [ 2, 15, 110, 'a', 'c', 'd' ]
 ```
@@ -144,7 +139,7 @@ console.log(arr);  // [ 15, 2, 'a', 55, 'ss', 78, 65, 100 ]
 var arr = [15, 2, 110, 78, 65, 100];
 console.log(arr.map(function (x)
 {
-    return x+100;
+return x+100;
 }));  // [ 115, 102, 210, 178, 165, 200 ]
 console.log(arr);  // [ 15, 2, 110, 78, 65, 100 ]
 ```
@@ -157,7 +152,7 @@ console.log(arr);  // [ 15, 2, 110, 78, 65, 100 ]
 var arr = [15, 2, 110, 78, 65, 100];
 console.log(arr.filter(function (value,index)
 {  // 筛选出索引为偶数或者值大于100的元素
-    return index%2===1||value>100;
+return index%2===1||value>100;
 }));  // [ 2, 110, 78, 100 ]
 console.log(arr);  // [ 15, 2, 110, 78, 65, 100 ]
 ```
@@ -168,13 +163,13 @@ console.log(arr);  // [ 15, 2, 110, 78, 65, 100 ]
 var arr = [1, 5, 7, 6, 3, 54, 55];
 console.log(arr.every(function (value)
 {  // 判断是否所有元素都大于10
-    return value > 10;
+return value > 10;
 })); // false
 
 var arr = [1, 5, 7, 6, 3, 54, 55];
 console.log(arr.some(function (value)
 {  // 判断是否有元素大于0
-    return value > 10;
+return value > 10;
 }));  // true
 ```
 
@@ -186,7 +181,7 @@ console.log(arr.some(function (value)
 var arr = [1, 5, 7, 6, 3, 54, 55,4];
 console.log(arr.reduce(function (value1,value2)
 {  // 求最大值
-    return value1>value2?value1:value2;
+return value1>value2?value1:value2;
 }));
 console.log(arr);  // 55
 ```

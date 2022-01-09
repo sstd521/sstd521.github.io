@@ -1,11 +1,18 @@
 ---
 title: 你不知道的JavaScript(上卷)学习笔记
-tags:
-  - JavaScript
+tags:[avaScript]
 date: 2016-10-13 14:35:54
 categories: 前端
-layout: post
 description: 你不知道的JavaScript(上卷)学习笔记精华
+---
+---
+title: Lua学习笔记
+tags:
+- Lua
+date: 2018-05-15 17:24:42
+categories: 编程学习
+layout: post
+description: Lua学习笔记一
 ---
 
 ### 函数作用域
