@@ -10,7 +10,7 @@ baseurl: ''
 # The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
 # If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
 # otherwise, the layout language will use the default value of 'en'.
-lang: zh
+lang: zh-CN
 
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
 timezone: Asia/Shanghai
@@ -23,9 +23,7 @@ title: OneNote                          # the main title
 tagline: 学习笔记   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  A minimal, portfolio, sidebar,
-  bootstrap Jekyll theme with responsive web design
-  and focuses on text presentation.
+  sstd521 OneNote.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: 'https://stayup.cn'
@@ -43,7 +41,7 @@ social:
   email: sstd521@gmail.com             # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/sstd521      # change to your twitter homepage
+#   - https://twitter.com/sstd521      # change to your twitter homepage
     - https://github.com/sstd521       # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
@@ -96,6 +94,11 @@ disqus:
   shortname: ''    # Fill with your Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 paginate: 10
+
+utterances:
+  comments: true
+  light_theme: github-light
+  dark_theme: photon-dark
 
 # ------------ The following options are not recommended to be modified ------------------
 
@@ -173,3 +176,4 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+    
